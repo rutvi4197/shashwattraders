@@ -1,2 +1,0 @@
-# shashwattraders
-Agarbatti Shopping Project
