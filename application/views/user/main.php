@@ -61,8 +61,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="col-md-3 m-wthree">
                 <div class="col-m">               
                   <a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
-                    <img src="<?php echo  base_url().'/assets/'.$product_name->product_photo; ?>"
-                     class="img-responsive" alt="">
+                    <img class="img-responsive Images_main" src="<?php echo  base_url().'/assets/'.$product_name->product_photo; ?>"
+                      alt="">
                    
                   </a>
                   <div class="mid-1">
@@ -81,10 +81,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                   </div>
                 </div>
               </div>
+              
                <?php endforeach;
                   endif;
                     
                ?>
+
               <!-- loop -->
               
   </div>

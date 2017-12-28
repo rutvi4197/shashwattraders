@@ -1,4 +1,4 @@
-<div class="footer">
+<div class="footer footer_margin">
   <div class="container">
     <div class="col-md-3 footer-grid">
       <h3>About Us</h3>
