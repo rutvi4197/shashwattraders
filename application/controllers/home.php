@@ -12,5 +12,6 @@ class Home extends CI_controller
 	public function brandsearch($brand_id)
 	{
 		echo $brand_id;
+		
 	}
 }

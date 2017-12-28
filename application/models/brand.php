@@ -8,5 +8,8 @@ class Brand extends CI_Model
 		$q=$this->db->query('select * from brand_tbl');
 		return $q->result();
 	}
+	
 }
 ?>
+
+
