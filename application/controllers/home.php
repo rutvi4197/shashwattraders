@@ -8,6 +8,11 @@ class Home extends CI_controller
 		$cat['brand_name']=$this->brand->fetchcat();
 		
 		$this->load->view('user/main',$cat);
+
+		$this->load->model('product');
+		$pro['product_name']=$this->product->fetchproduct();
+		$this->load->view('user/main',$pro);
+
 	}
 	public function brandsearch($brand_id)
 	{
