@@ -50,7 +50,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="video_height" data-vide-bg="<?php echo  base_url(); ?>/assets/video/agarbatti">
     <div class="container">
     <div class="banner-info">
+<<<<<<< HEAD
+=======
      
+>>>>>>> 714693869031643071b9a7589370fc9c7f5cbbc3
       <div class="search-form">
         <form action="#" method="post">
           <input class="searchbox" type="text" placeholder="Search..." name="Search...">
