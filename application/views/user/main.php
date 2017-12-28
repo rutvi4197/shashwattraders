@@ -29,7 +29,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <ul class="nav navbar-nav ">
               <?php if(count($brand_name) ){ 
                foreach($brand_name as $brand_name){ ?>
-              <li><a href="index.html" class="hyper "><span><?php echo $brand_name->brand_name; ?></span></a></li> 
+              <li><a href="index.php/home/brandsearch/<?php echo $brand_name->pk_brand_id?>" class="hyper "><span><?php echo $brand_name->brand_name; ?></span></a></li> 
               <?php }
                     }
                ?>
