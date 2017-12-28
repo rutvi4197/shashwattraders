@@ -27,100 +27,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           </div> 
           <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
             <ul class="nav navbar-nav ">
-              <li class=" active"><a href="index.html" class="hyper "><span>Home</span></a></li>  
-              
-              <li class="dropdown ">
-                <a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown" ><span>Kitchen<b class="caret"></b></span></a>
-                
-              </li>
-              <li class="dropdown">
-              
-                <a href="#" class="dropdown-toggle hyper" data-toggle="dropdown" ><span> Personal Care <b class="caret"></b></span></a>
-                <ul class="dropdown-menu multi multi1">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <ul class="multi-column-dropdown">
-                        <li><a href="care.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Ayurvedic </a></li>
-                        <li><a href="care.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Baby Care</a></li>
-                        <li><a href="care.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Cosmetics</a></li>
-                        <li><a href="care.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Deo & Purfumes</a></li>
-                    
-                      </ul>
-                      
-                    </div>
-                    <div class="col-sm-3">
-                      
-                      <ul class="multi-column-dropdown">
-                        <li><a href="care.html"> <i class="fa fa-angle-right" aria-hidden="true"></i>Hair Care </a></li>
-                        <li><a href="care.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Oral Care</a></li>
-                        <li><a href="care.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Personal Hygiene</a></li>
-                        <li><a href="care.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Skin care</a></li>
-                    
-                      </ul>
-                      
-                    </div>
-                    <div class="col-sm-3">
-                      
-                      <ul class="multi-column-dropdown">
-                        <li><a href="care.html"><i class="fa fa-angle-right" aria-hidden="true"></i> Fashion Accessories </a></li>
-                        <li><a href="care.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Grooming Tools</a></li>
-                        <li><a href="care.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Shaving Need</a></li>
-                        <li><a href="care.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Sanitary Needs</a></li>
-                    
-                      </ul>
-                    </div>
-                    <div class="col-sm-3 w3l">
-                      <a href="care.html"><img src="<?php echo  base_url(); ?>/assets/images/me1.png" class="img-responsive" alt=""></a>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>  
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle hyper" data-toggle="dropdown" ><span>Household<b class="caret"></b></span></a>
-                <ul class="dropdown-menu multi multi2">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <ul class="multi-column-dropdown">
-                        <li><a href="hold.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Cleaning Accessories</a></li>
-                        <li><a href="hold.html"><i class="fa fa-angle-right" aria-hidden="true"></i>CookWear</a></li>
-                        <li><a href="hold.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Detergents</a></li>
-                        <li><a href="hold.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Gardening Needs</a></li>
-                    
-                      </ul>
-                    
-                    </div>
-                    <div class="col-sm-3">
-                      
-                      <ul class="multi-column-dropdown">
-                        <li><a href="hold.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Kitchen & Dining</a></li>
-                        <li><a href="hold.html"><i class="fa fa-angle-right" aria-hidden="true"></i>KitchenWear</a></li>
-                        <li><a href="hold.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Pet Care</a></li>
-                        <li><a href="hold.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Plastic Wear</a></li>
-                    
-                      </ul>
-                    
-                    </div>
-                    <div class="col-sm-3">
-                    
-                      <ul class="multi-column-dropdown">
-                        <li><a href="hold.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Pooja Needs</a></li>
-                        <li><a href="hold.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Serveware</a></li>
-                        <li><a href="hold.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Safety Accessories</a></li>
-                        <li><a href="hold.html"><i class="fa fa-angle-right" aria-hidden="true"></i>Festive Decoratives </a></li>
-                    
-                      </ul>
-                    </div>
-                    <div class="col-sm-3 w3l">
-                      <a href="hold.html"><img src="<?php echo  base_url(); ?>/assets/images/me2.png" class="img-responsive" alt=""></a>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>  
-                </ul>
-              </li>
-              
-              <li><a href="codes.html" class="hyper"> <span>Codes</span></a></li>
-              <li><a href="contact.html" class="hyper"><span>Contact Us</span></a></li>
+              <?php if(count($brand_name) ){ 
+               foreach($brand_name as $brand_name){ ?>
+              <li><a href="index.html" class="hyper "><span><?php echo $brand_name->brand_name; ?></span></a></li> 
+              <?php }
+                    }
+               ?>
+            
             </ul>
           </div>
           </nav>
@@ -134,14 +47,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>      
 </div>
   <!---->
-<div data-vide-bg="<?php echo  base_url(); ?>/assets/video/video">
+<div class="video_height" data-vide-bg="<?php echo  base_url(); ?>/assets/video/agarbatti">
     <div class="container">
     <div class="banner-info">
-      <h3>It is a long established fact that a reader will be distracted by 
-      the readable </h3>  
+     
       <div class="search-form">
         <form action="#" method="post">
-          <input type="text" placeholder="Search..." name="Search...">
+          <input class="searchbox" type="text" placeholder="Search..." name="Search...">
           <input type="submit" value=" " >
         </form>
       </div>    
