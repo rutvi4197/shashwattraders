@@ -177,8 +177,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div data-vide-bg="<?php echo  base_url(); ?>/assets/video/video">
     <div class="container">
     <div class="banner-info">
-      <h3>It is a long established fact that a reader will be distracted by 
-      the readable </h3>  
       <div class="search-form">
         <form action="#" method="post">
           <input type="text" placeholder="Search..." name="Search...">
