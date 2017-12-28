@@ -4,8 +4,8 @@ class Home extends CI_controller
 {
 	public function index()
 	{
-		$this->load->model('category');
-		$cat['brand_name']=$this->category->fetchcat();
+		$this->load->model('brand');
+		$cat['brand_name']=$this->brand->fetchcat();
 		
 		$this->load->view('user/main',$cat);
 
@@ -13,5 +13,9 @@ class Home extends CI_controller
 		$pro['product_name']=$this->product->fetchproduct();
 		$this->load->view('user/main',$pro);
 
+	}
+	public function brandsearch($brand_id)
+	{
+		echo $brand_id;
 	}
 }
