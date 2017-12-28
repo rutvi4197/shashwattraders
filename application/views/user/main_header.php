@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
+
 
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -63,8 +61,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
     </script>
 <!---//End-rate---->
 
-</head>
-<body>
+
 <a href="offer.html"><img src="<?php echo  base_url(); ?>/assets/images/download.png" class="img-head" alt=""></a>
 <div class="header">
 
@@ -228,12 +225,54 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
             </ul>
           </div>
           </nav>
-           <div class="cart" >
+          <div class="cart" >
           
             <span class="fa fa-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
           </div>
           <div class="clearfix"></div>
         </div>
 
-</body>
-</html>
+<!-- //smooth scrolling -->
+<!-- for bootstrap working -->
+    <script src="js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<script type='text/javascript' src="<?php echo base_url();?>/assets/js/jquery.mycart.js"></script>
+  <script type="text/javascript">
+  $(function () {
+
+    var goToCartIcon = function($addTocartBtn){
+      var $cartIcon = $(".my-cart-icon");
+      var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
+      $addTocartBtn.prepend($image);
+      var position = $cartIcon.position();
+      $image.animate({
+        top: position.top,
+        left: position.left
+      }, 500 , "linear", function() {
+        $image.remove();
+      });
+    }
+
+    $('.my-cart-btn').myCart({
+      classCartIcon: 'my-cart-icon',
+      classCartBadge: 'my-cart-badge',
+      affixCartIcon: true,
+      checkoutCart: function(products) {
+        $.each(products, function(){
+          console.log(this);
+        });
+      },
+      clickOnAddToCart: function($addTocart){
+        goToCartIcon($addTocart);
+      },
+      getDiscountPrice: function(products) {
+        var total = 0;
+        $.each(products, function(){
+          total += this.quantity * this.price;
+        });
+        return total * 1;
+      }
+    });
+
+  });
+  </script>

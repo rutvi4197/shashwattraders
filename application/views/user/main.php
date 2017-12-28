@@ -63,11 +63,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                   <a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
                     <img src="<?php echo  base_url().'/assets/'.$product_name->product_photo; ?>"
                      class="img-responsive" alt="">
-                    <div class="offer"><p><span>Offer</span></p></div>
+                   
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="single.html"><?php echo $product_name->product_name ?></a></h6>              
+                      <h6><a href="index.php/singlepage/productdetail/<?php echo $product_name->pk_product_id; ?>"><?php echo $product_name->product_name ?></a></h6>              
                     </div>
                     <div class="mid-2">
                       <p >Rs.<?php echo $product_name->product_price ?></p>
@@ -112,10 +112,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     $().UItoTop({ easingType: 'easeOutQuart' });
     });
   </script>
-  <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-<!-- //smooth scrolling -->
-<!-- for bootstrap working -->
-   
+ 
+
                    <div class="clearfix"> </div>
               </div>
             </div>
