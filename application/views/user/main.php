@@ -1,4 +1,3 @@
-
 .<!DOCTYPE html>
 <html>
 <head>
@@ -10,52 +9,15 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 </head>
 <body>
+
+  <!-- header -->
+
 <?php include_once('main_header.php'); ?>
 
-        <div class="nav-top">
-          <nav class="navbar navbar-default">
-          
-          <div class="navbar-header nav_2">
-            <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            
+        
+          <!--video-->
+       
 
-          </div> 
-          <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-            <ul class="nav navbar-nav ">
-<<<<<<< HEAD
-              <?php if(count($brand_name) ):
-               foreach($brand_name as $brand_name):?>
-              <li><a href="index.html" class="hyper "><span><?php echo $brand_name->brand_name; ?></span></a></li> 
-              <?php endforeach;
-                  endif;
-                    
-=======
-              <?php if(count($brand_name) ){ 
-               foreach($brand_name as $brand_name){ ?>
-              <li><a href="index.php/home/brandsearch/<?php echo $brand_name->pk_brand_id?>" class="hyper "><span><?php echo $brand_name->brand_name; ?></span></a></li> 
-              <?php }
-                    }
->>>>>>> 23cb7300a9ccb53d1bd402ce1131f6294bf013b7
-               ?>
-            
-            </ul>
-          </div>
-          </nav>
-           <div class="cart" >
-          
-            <span class="fa fa-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-          
-        </div>      
-</div>
-  <!---->
 <div class="video_height" data-vide-bg="<?php echo  base_url(); ?>/assets/video/agarbatti">
     <div class="container">
     <div class="banner-info">
@@ -70,6 +32,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>  
     </div>
 </div>
+<!-- video complete -->
+
 
     <script>window.jQuery || document.write('<script src="<?php echo  base_url(); ?>/assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
     <script src="<?php echo  base_url(); ?>/assets/js/jquery.vide.min.js"></script>
@@ -97,7 +61,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="col-md-3 m-wthree">
                 <div class="col-m">               
                   <a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
-                    <img src="<?php echo  base_url()."/assets".$product_name->product_photo; ?>"
+                    <img src="<?php echo  base_url().'/assets/'.$product_name->product_photo; ?>"
                      class="img-responsive" alt="">
                     <div class="offer"><p><span>Offer</span></p></div>
                   </a>
@@ -106,7 +70,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                       <h6><a href="single.html"><?php echo $product_name->product_name ?></a></h6>              
                     </div>
                     <div class="mid-2">
-                      <p ><?php echo $product_name->product_price ?></p>
+                      <p >Rs.<?php echo $product_name->product_price ?></p>
                         
                       <div class="clearfix"></div>
                     </div>

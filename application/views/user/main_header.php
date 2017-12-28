@@ -93,5 +93,147 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
       </div>
  </div>
 </div>
+<!-- category -->
+<div class="nav-top">
+          <nav class="navbar navbar-default">
+          
+          <div class="navbar-header nav_2">
+            <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            
+
+          </div> 
+          <div class="navbar-header nav_2">
+            <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            
+
+          </div> 
+          <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+            <ul class="nav navbar-nav ">
+              <li class=" active"><a href="index.php/home" class="hyper "><span>Home</span></a></li>  
+              
+              <li class="dropdown ">
+                <a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown" ><span>Brand<b class="caret"></b></span></a>
+                <ul class="dropdown-menu multi">
+                  <div class="row">
+                    <div class="col-sm-3">
+                    
+                      <ul class="multi-column-dropdown">
+                        <?php 
+                        if(count($brand_name)):
+                          foreach($brand_name as $brand_name):
+
+                        ?>
+                        <li><a href="kitchen.html"><i class="fa fa-angle-right" aria-hidden="true"></i><?php echo $brand_name->brand_name; ?> </a></li>
+                       
+                      <?php endforeach; 
+                    endif;
+                    ?>
+                      </ul>
+                    
+                    </div>
+                    
+                    <div class="clearfix"></div>
+                  </div>  
+                </ul>
+              </li>
+              <li class="dropdown">
+              
+                <a href="#" class="dropdown-toggle hyper" data-toggle="dropdown" ><span> Category  <b class="caret"></b></span></a>
+                <ul class="dropdown-menu multi multi1">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      
+                      <ul class="multi-column-dropdown">
+                         <?php 
+                        if(count($category_name)):
+                          foreach($category_name as $category_name):
+
+                        ?>
+                        <li><a href="care.html"><i class="fa fa-angle-right" aria-hidden="true"></i> <?php echo $category_name->cat_name; ?> </a></li>
+                        <?php endforeach; 
+                    endif;
+                    ?>
+                    
+                      </ul>
+                    </div>
+                    
+                    <div class="clearfix"></div>
+                  </div>  
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle hyper" data-toggle="dropdown" ><span>Packing Type<b class="caret"></b></span></a>
+                <ul class="dropdown-menu multi multi1">
+                  <div class="row">
+                    
+                    <div class="col-sm-9">
+                    
+                      <ul class="multi-column-dropdown">
+                        <?php 
+                        if(count($packing_name)):
+                          foreach($packing_name as $packing_name):
+
+                        ?>
+                        <li><a href="hold.html"><i class="fa fa-angle-right" aria-hidden="true"></i><?php  echo $packing_name->pt_name; ?></a></li>
+                       
+                     <?php endforeach; 
+                    endif;
+                    ?>
+                      </ul>
+                    </div>
+                    <div class="col-sm-3 w3l">
+                      <a href="hold.html"><img src="<?php echo base_url();?>/assets/images/me2.png" class="img-responsive" alt=""></a>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>  
+                </ul>
+              </li>
+              
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle hyper" data-toggle="dropdown" ><span>Fragrance Type<b class="caret"></b></span></a>
+                <ul class="dropdown-menu multi multi1">
+                  <div class="row">
+                    
+                    <div class="col-sm-9">
+                    
+                      <ul class="multi-column-dropdown">
+                        <?php 
+                        if(count($packing_name)):
+                          foreach($packing_name as $packing_name):
+
+                        ?>
+                        <li><a href="hold.html"><i class="fa fa-angle-right" aria-hidden="true"></i><?php  echo $packing_name ?></a></li>
+                       
+                     <?php endforeach; 
+                    endif;
+                    ?>
+                      </ul>
+                    </div>
+                   
+                    <div class="clearfix"></div>
+                  </div>  
+                </ul>
+              </li>
+              <li><a href="contact.php" class="hyper"><span>Contact Us</span></a></li>
+            </ul>
+          </div>
+          </nav>
+           <div class="cart" >
+          
+            <span class="fa fa-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+
 </body>
 </html>
