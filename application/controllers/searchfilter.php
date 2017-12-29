@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Brandwisesearch extends CI_controller
+class Searchfilter extends CI_controller
 {
 
 	public function search($brand_id)
