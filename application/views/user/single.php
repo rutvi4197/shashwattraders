@@ -17,15 +17,8 @@
 	   		<div class="single-w3agile">
 							
 <div id="picture-frame">
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 			<img src="<?php echo base_url();?>/assets/images/si.jpg" data-src="<?php echo base_url();?>/assets/images/si-1.jpg" alt="" class="img-responsive"/>
 
-=======
->>>>>>> 1b034f606394af3519ab8da063f07d00d3ae7526
->>>>>>> 907e3d84ff025d9f6ef45596ba34e07d1d075d08
 			<img src="<?php echo  base_url().'/application/assets/'.$product_detail->product_photo; ?>" data-src="<?php echo  base_url().'/application/assets/'.$product_detail->product_photo; ?>" alt="" class="img-responsive"/>
 		</div>
 										<script src="<?php echo base_url();?>/application/assets/js/jquery.zoomtoo.js"></script>

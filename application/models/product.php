@@ -24,6 +24,16 @@ class Product extends CI_Model
 		$q=$this->db->query("select * from product_tbl where fk_brand_id='$brand_id'" );
 		return $q->result();
 	}
+	public function catsearch($cat_id)
+	{
+		$q=$this->db->query("select * from product_tbl where fk_catgory_id='$cat_id'" );
+		return $q->result();
+	}
+	public function packingsearchbyid($packing_id)
+	{
+		$q=$this->db->query("select * from product_tbl where fk_ptid='$packing_id'" );
+		return $q->result();
+	}
 	public function productsearchbybrand($pro_id)
 	{
 		$q=$this->db->query("select * from product_tbl where fk_brand_id =(select fk_brand_id from product_tbl where pk_product_id='$pro_id') and pk_product_id!='$pro_id'" );

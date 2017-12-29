@@ -122,7 +122,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                           foreach($brand_name as $brand_name):
                            
                         ?>
-                        <li><a href="<?php echo site_url('brandwisesearch/search/'.$brand_name->pk_brand_id); ?>"><i class="fa fa-angle-right" aria-hidden="true"></i><?php echo $brand_name->brand_name; ?> </a></li>
+                        <li><a href="<?php echo site_url('brandwisesearch/brandsearch/'.$brand_name->pk_brand_id); ?>"><i class="fa fa-angle-right" aria-hidden="true"></i><?php echo $brand_name->brand_name; ?> </a></li>
                        
                       <?php endforeach; 
                     endif;
@@ -135,6 +135,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                   </div>  
                 </ul>
               </li>
+
               <li class="dropdown">
               
                 <a href="#" class="dropdown-toggle hyper" data-toggle="dropdown" ><span> Category  <b class="caret"></b></span></a>
@@ -148,7 +149,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                           foreach($category_name as $category_name):
 
                         ?>
-                        <li><a href="care.html"><i class="fa fa-angle-right" aria-hidden="true"></i> <?php echo $category_name->cat_name; ?> </a></li>
+                         <li><a href="<?php echo site_url('brandwisesearch/categorysearch/'.$category_name->pk_cat_id); ?>"><i class="fa fa-angle-right" aria-hidden="true"></i><?php echo $category_name->cat_name; ?> </a></li>
+
+                       
                         <?php endforeach; 
                     endif;
                     ?>
@@ -160,6 +163,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                   </div>  
                 </ul>
               </li>
+
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle hyper" data-toggle="dropdown" ><span>Packing Type<b class="caret"></b></span></a>
                 <ul class="dropdown-menu multi multi1">
@@ -173,8 +177,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                           foreach($packing_name as $packing_name):
 
                         ?>
-                        <li><a href="hold.html"><i class="fa fa-angle-right" aria-hidden="true"></i><?php  echo $packing_name->pt_name; ?></a></li>
-                       
+                        <li><a href="<?php echo site_url('brandwisesearch/packingsearch/'.$packing_name->pk_pt_id); ?>"><i class="fa fa-angle-right" aria-hidden="true"></i><?php echo $packing_name->pt_name; ?> </a></li>
+
+                      
                      <?php endforeach; 
                     endif;
                     ?>
