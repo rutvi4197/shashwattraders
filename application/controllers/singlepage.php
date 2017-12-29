@@ -11,7 +11,8 @@ class Singlepage extends CI_controller
 		$this->load->model('product');
 		$cat['product_name']=$this->product->fetchproduct();
 		$cat['product_detail']=$this->product->fetchproductbyid($product_id);
-
+		$cat['fragrance_detail']=$this->product->fetchfragrancebyproid($product_id);
+		
 		$this->load->model('category');
 		$cat['category_name']=$this->category->fetchcat();
 
