@@ -15,7 +15,7 @@
 	   		<div class="single-w3agile">
 							
 <div id="picture-frame">
-			<img src="<?php echo base_url();?>/assets/images/si.jpg" data-src="<?php echo base_url();?>/assets/images/si-1.jpg" alt="" class="img-responsive"/>
+			<img src="<?php echo base_url();?>/application/assets/images/si.jpg" data-src="<?php echo base_url();?>/assets/images/si-1.jpg" alt="" class="img-responsive"/>
 		</div>
 										<script src="<?php echo base_url();?>/assets/js/jquery.zoomtoo.js"></script>
 								<script>

@@ -9,20 +9,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
-<link href="<?php echo  base_url(); ?>/assets/css/bootstrap.css" rel='stylesheet' type='text/css' />
-<link href="<?php echo  base_url(); ?>/assets/css/shashwattraders.css" rel='stylesheet' type='text/css' />
+<link href="<?php echo  base_url(); ?>/application/assets/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="<?php echo  base_url(); ?>/application/assets/css/shashwattraders.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
-<link href="<?php echo  base_url(); ?>/assets/css/style.css" rel='stylesheet' type='text/css' />
+<link href="<?php echo  base_url(); ?>/application/assets/css/style.css" rel='stylesheet' type='text/css' />
 <!-- js -->
-   <script src="<?php echo  base_url(); ?>/assets/js/jquery-1.11.1.min.js"></script>
+   <script src="<?php echo  base_url(); ?>/application/assets/js/jquery-1.11.1.min.js"></script>
 <!-- //js -->
- <script src="<?php echo base_url(); ?>/assets/js/bootstrap.js"></script>
+ <script src="<?php echo base_url(); ?>/application/assets/js/bootstrap.js"></script>
 <!-- //for bootstrap working -->
-<script type='text/javascript' src="<?php echo base_url(); ?>/assets/js/jquery.mycart.js"></script>
+<script type='text/javascript' src="<?php echo base_url(); ?>/application/assets/js/jquery.mycart.js"></script>
 
 <!-- start-smoth-scrolling -->
-<script type="text/javascript" src="<?php echo  base_url(); ?>/assets/js/move-top.js"></script>
-<script type="text/javascript" src="<?php echo  base_url(); ?>/assets/js/easing.js"></script>
+<script type="text/javascript" src="<?php echo  base_url(); ?>/application/assets/js/move-top.js"></script>
+<script type="text/javascript" src="<?php echo  base_url(); ?>/application/assets/js/easing.js"></script>
 <script type="text/javascript">
   jQuery(document).ready(function($) {
     $(".scroll").click(function(event){   
@@ -32,12 +32,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
   });
 </script>
 <!-- start-smoth-scrolling -->
-<link href="<?php echo  base_url(); ?>/assets/css/font-awesome.css" rel="stylesheet"> 
-<link href='<?php echo  base_url(); ?>/assets///fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<link href='<?php echo  base_url(); ?>/assets///fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
+<link href="<?php echo  base_url(); ?>/application/assets/css/font-awesome.css" rel="stylesheet"> 
+<link href='<?php echo  base_url(); ?>/application/assets///fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<link href='<?php echo  base_url(); ?>/application/assets///fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
 <!--- start-rate---->
-<script src="<?php echo  base_url(); ?>/assets/js/jstarbox.js"></script>
-  <link rel="stylesheet" href="<?php echo  base_url(); ?>/assets/css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
+<script src="<?php echo  base_url(); ?>/application/assets/js/jstarbox.js"></script>
+  <link rel="stylesheet" href="<?php echo  base_url(); ?>/application/assets/css/jstarbox.css" type="text/css" media="screen" charset="utf-8" />
     <script type="text/javascript">
       jQuery(function() {
       jQuery('.starbox').each(function() {
@@ -62,7 +62,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!---//End-rate---->
 
 
-<a href="offer.html"><img src="<?php echo  base_url(); ?>/assets/images/download.png" class="img-head" alt=""></a>
+<a href="offer.html"><img src="<?php echo  base_url(); ?>/application/assets/images/download.png" class="img-head" alt=""></a>
 <div class="header">
 
     <div class="container">
@@ -107,7 +107,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
           
           <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
             <ul class="nav navbar-nav ">
-              <li class=" active"><a href="home" class="hyper "><span>Home</span></a></li>  
+              <li class=" active"><a href="<?php echo site_url('home'); ?>" class="hyper "><span>Home</span></a></li>  
                 
               <li class="dropdown ">
                 <a href="#" class="dropdown-toggle  hyper" data-toggle="dropdown" ><span>Brand<b class="caret"></b></span></a>
@@ -225,9 +225,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 <!-- //smooth scrolling -->
 <!-- for bootstrap working -->
-    <script src="js/bootstrap.js"></script>
+    
 <!-- //for bootstrap working -->
-<script type='text/javascript' src="<?php echo base_url();?>/assets/js/jquery.mycart.js"></script>
+<script type='text/javascript' src="<?php echo base_url();?>/application/assets/js/jquery.mycart.js"></script>
   <script type="text/javascript">
   $(function () {
 

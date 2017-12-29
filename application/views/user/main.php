@@ -18,7 +18,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           <!--video-->
        
 
-<div class="video_height" data-vide-bg="<?php echo  base_url(); ?>/assets/video/agarbatti">
+<div class="video_height" data-vide-bg="<?php echo  base_url(); ?>/application/assets/video/agarbatti">
     <div class="container">
     <div class="banner-info">
      
@@ -35,8 +35,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- video complete -->
 
 
-    <script>window.jQuery || document.write('<script src="<?php echo  base_url(); ?>/assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
-    <script src="<?php echo  base_url(); ?>/assets/js/jquery.vide.min.js"></script>
+    <script>window.jQuery || document.write('<script src="<?php echo  base_url(); ?>/application/assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+    <script src="<?php echo  base_url(); ?>/application/assets/js/jquery.vide.min.js"></script>
 
 <!--content-->
 <div class="content-top ">
@@ -61,7 +61,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <div class="col-md-3 m-wthree">
                 <div class="col-m">               
                   <a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
-                    <img class="img-responsive Images_main" src="<?php echo  base_url().'/assets/'.$product_name->product_photo; ?>"
+                    <img class="img-responsive Images_main" src="<?php echo  base_url().'/application/assets/'.$product_name->product_photo; ?>"
                       alt="">
                    
                   </a>
