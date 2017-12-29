@@ -56,7 +56,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class=" con-w3l">
             <!-- loop -->
             <?php if(count($product_name) ):
-               foreach($product_name as $product_name):?>
+
+
+               foreach($product_name as $product_name):
+                $name=$product_name->product_name;
+              $len=strlen($name);
+                
+
+                if($len>=15)
+                {
+                  $sortcontent=substr($name,0,15).' ...';
+                }
+                else
+                {
+                  $sortcontent=substr($name,0,15);
+                }
+              ?>               
+               
               
               <div class="col-md-3 m-wthree">
                 <div class="col-m">               
@@ -67,7 +83,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="singlepage/productdetail/<?php echo $product_name->pk_product_id; ?>"><?php echo $product_name->product_name ?></a></h6>              
+                      <h6><a href="singlepage/productdetail/<?php echo $product_name->pk_product_id; ?> " 
+                      class="productname_main"><?php echo $sortcontent ?></a></h6>              
                     </div>
                     <div class="mid-2">
                       <p >Rs.<?php echo $product_name->product_price ?></p>
