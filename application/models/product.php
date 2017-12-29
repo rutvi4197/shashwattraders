@@ -19,4 +19,9 @@ class Product extends CI_Model
 		WHERE fp.fk_product_id ='$pro_id'AND f.fragrance_id = fp.fk_fragrance_id");
 		return $q->result();
 	}
+	public function brandsearch($brand_id)
+	{
+		$q=$this->db->query("select * from product_tbl where fk_brand_id='$brand_id'" );
+		return $q->result();
+	}
 }

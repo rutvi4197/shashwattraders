@@ -117,11 +117,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                     
                       <ul class="multi-column-dropdown">
                         <?php 
+                       
                         if(count($brand_name)):
                           foreach($brand_name as $brand_name):
-
+                           
                         ?>
-                        <li><a href="kitchen.html"><i class="fa fa-angle-right" aria-hidden="true"></i><?php echo $brand_name->brand_name; ?> </a></li>
+                        <li><a href="<?php echo site_url('brandwisesearch/search/'.$brand_name->pk_brand_id); ?>"><i class="fa fa-angle-right" aria-hidden="true"></i><?php echo $brand_name->brand_name; ?> </a></li>
                        
                       <?php endforeach; 
                     endif;
@@ -192,15 +193,24 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                 <ul class="dropdown-menu multi multi1">
                   <div class="row">
                     
-                    <div class="col-sm-9">
+                    <div class="col-sm-3">
                     
                       <ul class="multi-column-dropdown">
                         <?php 
-                        if(count($packing_name)):
-                          foreach($packing_name as $packing_name):
-
+                        $cnt=0;
+                        if(count($fragrance_name)):
+                          foreach($fragrance_name as $fragrance_name):
+                            $cnt++;
+                            if($cnt>5)
+                            {
+                              ?>
+                            </ul>
+                          </div>
+                                 <div class="col-sm-3">
+                      <ul class="multi-column-dropdown">
+                        <?php    }
                         ?>
-                        <li><a href="hold.html"><i class="fa fa-angle-right" aria-hidden="true"></i><?php  echo $packing_name ?></a></li>
+                        <li><a href="hold.html"><i class="fa fa-angle-right" aria-hidden="true"></i><?php  echo $fragrance_name->fragrance_name ?></a></li>
                        
                      <?php endforeach; 
                     endif;
