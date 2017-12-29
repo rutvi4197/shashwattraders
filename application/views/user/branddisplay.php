@@ -14,25 +14,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <?php include_once('main_header.php'); ?>
 
-        
-          <!--video-->
-       
-
-<div class="video_height" data-vide-bg="<?php echo  base_url(); ?>/application/assets/video/agarbatti">
-    <div class="container">
-    <div class="banner-info">
-     
-
-      <div class="search-form">
-        <form action="#" method="post">
-          <input class="searchbox" type="text" placeholder="Search..." name="Search...">
-          <input type="submit" value=" " >
-        </form>
-      </div>    
-    </div>  
-    </div>
-</div>
-<!-- video complete -->
 
 
     <script>window.jQuery || document.write('<script src="<?php echo  base_url(); ?>/application/assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
@@ -55,8 +36,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           <div class="tab-pane active text-style" id="tab1">
             <div class=" con-w3l">
             <!-- loop -->
-            <?php if(count($product_name) ):
-               foreach($product_name as $product_name):?>
+            <?php if(count($brand_product_name) ):
+               foreach($brand_product_name as $product_name):?>
               
               <div class="col-md-3 m-wthree">
                 <div class="col-m">               
@@ -67,7 +48,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="<?php echo site_url('singlepage/productdetail/'.$product_name->pk_product_id); ?>"><?php echo $product_name->product_name ?></a></h6>              
+                      <h6><a href="singlepage/productdetail/<?php echo $product_name->pk_product_id; ?>"><?php echo $product_name->product_name ?></a></h6>              
                     </div>
                     <div class="mid-2">
                       <p >Rs.<?php echo $product_name->product_price ?></p>
