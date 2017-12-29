@@ -76,14 +76,24 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               
               <div class="col-md-3 m-wthree">
                 <div class="col-m">               
+<<<<<<< HEAD
+                  <a href="#"  class="offer-img">
+=======
                   <a href="<?php echo site_url('singlepage/productdetail/'.$product_name->pk_product_id); ?>"  class="offer-img">
+>>>>>>> 79ccef453fa5483d3dc11ccf7263991b2e2b499b
                     <img class="img-responsive Images_main" src="<?php echo  base_url().'/application/assets/'.$product_name->product_photo; ?>"
                       alt="">
                    
                   </a>
                   <div class="mid-1">
                     <div class="women">
+<<<<<<< HEAD
+
+                      <h6><a href="<?php echo site_url('singlepage/productdetail/'.$product_name->pk_product_id); ?>"><?php echo $sortcontent ?></a></h6>              
+
+=======
                      <h6><a href="<?php echo site_url('singlepage/productdetail/'.$product_name->pk_product_id); ?>"><?php echo $sortcontent ?></a></h6>              
+>>>>>>> 79ccef453fa5483d3dc11ccf7263991b2e2b499b
                     </div>
                     <div class="mid-2">
                       <p >Rs.<?php echo $product_name->product_price ?></p>
