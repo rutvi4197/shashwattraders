@@ -18,8 +18,11 @@
 							
 <div id="picture-frame">
 
+<<<<<<< HEAD
 			<img src="<?php echo base_url();?>/assets/images/si.jpg" data-src="<?php echo base_url();?>/assets/images/si-1.jpg" alt="" class="img-responsive"/>
 
+=======
+>>>>>>> 1b034f606394af3519ab8da063f07d00d3ae7526
 			<img src="<?php echo  base_url().'/application/assets/'.$product_detail->product_photo; ?>" data-src="<?php echo  base_url().'/application/assets/'.$product_detail->product_photo; ?>" alt="" class="img-responsive"/>
 
 		</div>
@@ -38,17 +41,48 @@
 			</div>
 			<div class="col-md-7 single-top-left ">
 								<div class="single-right">
-				<h3>Wheat</h3>
+				<h3><?php echo $product_detail->product_name ?></h3>
 				
 					
 				 <div class="pr-single">
-				  <p class="reduced "><del>$10.00</del>$5.00</p>
+				 	<h3>
+				  <p class="reduced "><del>Rs.<?php echo $product_detail->product_price*2 ?></del>
+				  	Rs.<?php echo $product_detail->product_price ?>
+				  </p></h3>
 				</div>
-				<div class="block block-w3">
-					<div class="starbox small ghosting"> </div>
-				</div>
-				<p class="in-pa"> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
-			   	
+				
+				<br>
+				<table class="table" border="1">
+					<tr>
+						<td  colspan="2"><b><center><font color="Red" size="5">Description</font></center></b></td>
+					</tr>
+					<tr>
+						<td>Weight</td>
+						<td> <?php echo $product_detail->Weight ?></td>
+					</tr>
+					<tr>
+						<td>Burning Time </td>
+						<td> <?php echo $product_detail->burning_time ?></td>
+					</tr>
+					<tr>
+						<td>Fragrance </td>
+						<td> <?php if(count($fragrance_detail) ):
+               foreach($fragrance_detail as $fragrance_detail):?>
+
+               		<?php echo $fragrance_detail->fragrance_name ?>,
+
+               		  <?php endforeach;
+                  endif;
+                    ?>
+
+               </td>
+					</tr>
+					<tr>
+						<td>Bathi Type </td>
+						<td> <?php echo $product_detail->type_name ?></td>
+					</tr>
+				</table>
+			
 				<ul class="social-top">
 					<li><a href="#" class="icon facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span></span></a></li>
 					<li><a href="#" class="icon twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span></span></a></li>

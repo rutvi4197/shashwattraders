@@ -9,6 +9,7 @@ class Brand extends CI_Model
 		return $q->result();
 	}
 	
+	
 }
 ?>
 
