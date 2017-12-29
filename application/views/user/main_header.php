@@ -122,7 +122,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                           foreach($brand_name as $brand_name):
                            
                         ?>
+<<<<<<< HEAD
                         <li><a href="<?php echo site_url('brandwisesearch/brandsearch/'.$brand_name->pk_brand_id); ?>"><i class="fa fa-angle-right" aria-hidden="true"></i><?php echo $brand_name->brand_name; ?> </a></li>
+=======
+                        <li><a href="<?php echo site_url('searchfilter/search/'.$brand_name->pk_brand_id); ?>"><i class="fa fa-angle-right" aria-hidden="true"></i><?php echo $brand_name->brand_name; ?> </a></li>
+>>>>>>> 6f7d4321453183fc93c2dcf91e4bfc19ee9ee389
                        
                       <?php endforeach; 
                     endif;
