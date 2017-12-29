@@ -1,20 +1,16 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Singlepage extends CI_controller
-{
+class Login extends CI_controller
 
-	public function productdetail($product_id)
+{
+	public function index()
 	{
 		$this->load->model('brand');
 		$cat['brand_name']=$this->brand->fetchbrand();
 		
+
 		$this->load->model('product');
 		$cat['product_name']=$this->product->fetchproduct();
-
-		$cat['product_detail']=$this->product->fetchproductbyid($product_id);
-		$cat['fragrance_detail']=$this->product->fetchfragrancebyproid($product_id);
-		$cat['brand_product_name']=$this->product->productsearchbybrand($product_id);
-		
 
 		$this->load->model('category');
 		$cat['category_name']=$this->category->fetchcat();
@@ -22,6 +18,19 @@ class Singlepage extends CI_controller
 		$this->load->model('packingtype');
 		$cat['packing_name']=$this->packingtype->fetchpack();
 
-		$this->load->view('user/single',$cat);
+		$this->load->model('fragrance');
+		$cat['fragrance_name']=$this->fragrance->fetchfra();
+
+		$this->load->view('user/login');
 	}
+
+	public function userlogin($email_id,$password)
+	{
+
+		
+		$this->load->model('user');
+		$cat['user_login']=$this->user->Authentication($email_id,$password);
+
+	}
+
 }
