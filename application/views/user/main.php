@@ -67,7 +67,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="index.php/singlepage/productdetail/<?php echo $product_name->pk_product_id; ?>"><?php echo $product_name->product_name ?></a></h6>              
+                      <h6><a href="singlepage/productdetail/<?php echo $product_name->pk_product_id; ?>"><?php echo $product_name->product_name ?></a></h6>              
                     </div>
                     <div class="mid-2">
                       <p >Rs.<?php echo $product_name->product_price ?></p>
