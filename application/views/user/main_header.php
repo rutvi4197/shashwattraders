@@ -68,7 +68,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
     <div class="container">
       
       <div class="logo">
-       <h1 ><a href="index.html">Shashwat Traders<span>The Best Choice for AGgarbatti</span></a></h1>
+       <h1 ><a href="index.html">Shashwat Traders<span>The Best Choice for Aggarbatti</span></a></h1>
       </div>
       <div class="head-t">
         <ul class="card">
@@ -122,11 +122,10 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                           foreach($brand_name as $brand_name):
                            
                         ?>
-<<<<<<< HEAD
-                        <li><a href="<?php echo site_url('brandwisesearch/brandsearch/'.$brand_name->pk_brand_id); ?>"><i class="fa fa-angle-right" aria-hidden="true"></i><?php echo $brand_name->brand_name; ?> </a></li>
-=======
-                        <li><a href="<?php echo site_url('searchfilter/search/'.$brand_name->pk_brand_id); ?>"><i class="fa fa-angle-right" aria-hidden="true"></i><?php echo $brand_name->brand_name; ?> </a></li>
->>>>>>> 6f7d4321453183fc93c2dcf91e4bfc19ee9ee389
+
+                        <li><a href="<?php echo site_url('searchfilter/brandsearch/'.$brand_name->pk_brand_id); ?>"><i class="fa fa-angle-right" aria-hidden="true"></i><?php echo $brand_name->brand_name; ?> </a></li>
+
+                       
                        
                       <?php endforeach; 
                     endif;
@@ -153,7 +152,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                           foreach($category_name as $category_name):
 
                         ?>
-                         <li><a href="<?php echo site_url('brandwisesearch/categorysearch/'.$category_name->pk_cat_id); ?>"><i class="fa fa-angle-right" aria-hidden="true"></i><?php echo $category_name->cat_name; ?> </a></li>
+                         <li><a href="<?php echo site_url('searchfilter/categorysearch/'.$category_name->pk_cat_id); ?>"><i class="fa fa-angle-right" aria-hidden="true"></i><?php echo $category_name->cat_name; ?> </a></li>
 
                        
                         <?php endforeach; 
@@ -181,7 +180,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                           foreach($packing_name as $packing_name):
 
                         ?>
-                        <li><a href="<?php echo site_url('brandwisesearch/packingsearch/'.$packing_name->pk_pt_id); ?>"><i class="fa fa-angle-right" aria-hidden="true"></i><?php echo $packing_name->pt_name; ?> </a></li>
+                        <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i><?php echo $packing_name->pt_name; ?> </a></li>
 
                       
                      <?php endforeach; 
@@ -189,9 +188,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                     ?>
                       </ul>
                     </div>
-                    <div class="col-sm-3 w3l">
-                      <a href="hold.html"><img src="<?php echo base_url();?>/assets/images/me2.png" class="img-responsive" alt=""></a>
-                    </div>
+                  
                     <div class="clearfix"></div>
                   </div>  
                 </ul>
@@ -219,7 +216,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                       <ul class="multi-column-dropdown">
                         <?php    }
                         ?>
-                        <li><a href="hold.html"><i class="fa fa-angle-right" aria-hidden="true"></i><?php  echo $fragrance_name->fragrance_name ?></a></li>
+                        <li><a href="<?php echo site_url('searchfilter/fragrancesearch/'.$fragrance_name->fragrance_id); ?>"><i class="fa fa-angle-right" aria-hidden="true"></i><?php  echo $fragrance_name->fragrance_name ?></a></li>
                        
                      <?php endforeach; 
                     endif;

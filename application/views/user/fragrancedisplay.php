@@ -36,22 +36,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           <div class="tab-pane active text-style" id="tab1">
             <div class=" con-w3l">
             <!-- loop -->
-            <?php if(count($pack_name) ):
-               foreach($pack_name as $pack_name):?>
+            <?php if(count($fragrance_product_name) ):
+               foreach($fragrance_product_name as $product_name):?>
               
               <div class="col-md-3 m-wthree">
                 <div class="col-m">               
-                  <a href="?php echo site_url('singlepage/productdetail/'.$pack_name->pk_product_id); ?>" class="offer-img">
-                    <img class="img-responsive Images_main" src="<?php echo  base_url().'/application/assets/'.$pack_name->product_photo; ?>"
+                  <a href="<?php echo site_url('singlepage/productdetail/'.$product_name->pk_product_id); ?>""  class="offer-img">
+                    <img class="img-responsive Images_main" src="<?php echo  base_url().'/application/assets/'.$product_name->product_photo; ?>"
                       alt="">
                    
                   </a>
                   <div class="mid-1">
                     <div class="women">
-                      <h6><a href="<?php echo site_url('singlepage/productdetail/'.$pack_name->pk_product_id); ?>"><?php echo $pack_name->product_name ?></a></h6>              
+                      <h6><a href="<?php echo site_url('singlepage/productdetail/'.$product_name->pk_product_id); ?>"><?php echo $product_name->product_name ?></a></h6>              
                     </div>
                     <div class="mid-2">
-                      <p >Rs.<?php echo $pack_name->product_price ?></p>
+                      <p >Rs.<?php echo $product_name->product_price ?></p>
                         
                       <div class="clearfix"></div>
                     </div>

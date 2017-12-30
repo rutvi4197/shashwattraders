@@ -41,7 +41,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               
               <div class="col-md-3 m-wthree">
                 <div class="col-m">               
-                  <a href="" data-toggle="modal" data-target="#myModal1" class="offer-img">
+                  <a href="<?php echo site_url('singlepage/productdetail/'.$cat_name->pk_product_id); ?>"  class="offer-img">
                     <img class="img-responsive Images_main" src="<?php echo  base_url().'/application/assets/'.$cat_name->product_photo; ?>"
                       alt="">
                    
@@ -49,7 +49,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                   <div class="mid-1">
                     <div class="women">
                       
-                      <h6><a href="singlepage/productdetail/<?php echo $cat_name->pk_product_id; ?>"><?php echo $cat_name->product_name ?></a></h6>              
+                      <h6><a href="<?php echo site_url('singlepage/productdetail/'.$cat_name->pk_product_id); ?>"><?php echo $cat_name->product_name ?></a></h6>              
                     </div>
                     <div class="mid-2">
                       <p >Rs.<?php echo $cat_name->product_price ?></p>

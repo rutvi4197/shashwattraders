@@ -22,6 +22,10 @@ class Singlepage extends CI_controller
 		$this->load->model('packingtype');
 		$cat['packing_name']=$this->packingtype->fetchpack();
 
+		$this->load->model('fragrance');
+		$cat['fragrance_name']=$this->fragrance->fetchfra();
+
+
 		$this->load->view('user/single',$cat);
 	}
 }

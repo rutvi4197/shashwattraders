@@ -40,5 +40,13 @@ class Product extends CI_Model
 		
 		return $q->result();
 	}
+
+
+	public function fragrancesearchbyid($pro_id)
+	{
+		$q=$this->db->query("select * from product_tbl where pk_product_id In (select fk_product_id from fragrance_product_tbl where fk_fragrance_id='$pro_id')" );
+		
+		return $q->result();
+	}
 }
 ?>
