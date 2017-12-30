@@ -24,12 +24,21 @@ class Login extends CI_controller
 		$this->load->view('user/login');
 	}
 
-	public function userlogin($email_id,$password)
+	public function userlogin()
 	{
 
-		
+		$email_id=$this->input->post('Email');
+		$password=$this->input->post('Password');
+		echo $email_id.$password;
 		$this->load->model('user');
-		$cat['user_login']=$this->user->Authentication($email_id,$password);
+		if($this->user->Authentication($email_id,$password))
+		{
+				$this->session->set_userdata('email_id',$email_id);
+				echo 'login sucessfully'; 
+		}
+		else {
+			echo 'Password Invalid';
+		}
 
 	}
 

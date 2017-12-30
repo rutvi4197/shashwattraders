@@ -2,6 +2,12 @@
 
 class Product extends CI_Model
 {
+	public function productsearchbyname()
+	{
+		$match = $this->input->post('search');
+		$q=$this->db->query("select * from product_tbl where product_name like '%$match%'  ");
+		return $q->result();
+	}
 	public function fetchproduct()
 	{
 		$q=$this->db->query('select * from product_tbl');

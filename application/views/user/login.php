@@ -29,7 +29,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="main-agileits">
         <div class="form-w3agile">
           <h3>Login</h3>
-          <form action="#" method="post">
+          <form action="<?php echo site_url('login/userlogin') ?>" method="post">
             <div class="key">
               <i class="fa fa-envelope" aria-hidden="true"></i>
               <input  type="text" value="Email" name="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
