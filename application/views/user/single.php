@@ -18,11 +18,9 @@
 							
 <div id="picture-frame">
 
-<<<<<<< HEAD
+
 			<img src="<?php echo base_url();?>/assets/images/si.jpg" data-src="<?php echo base_url();?>/assets/images/si-1.jpg" alt="" class="img-responsive"/>
 
-=======
->>>>>>> 1b034f606394af3519ab8da063f07d00d3ae7526
 			<img src="<?php echo  base_url().'/application/assets/'.$product_detail->product_photo; ?>" data-src="<?php echo  base_url().'/application/assets/'.$product_detail->product_photo; ?>" alt="" class="img-responsive"/>
 
 		</div>
