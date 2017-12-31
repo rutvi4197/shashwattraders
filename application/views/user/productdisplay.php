@@ -14,34 +14,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <?php include_once('main_header.php'); ?>
 
-        
-          <!--video-->
-       
-
-<div class="video_height" data-vide-bg="<?php echo  base_url(); ?>/application/assets/video/agarbatti">
-    <div class="container">
-    <div class="banner-info">
-     
-
-      <div class="search-form">
-        <?php 
-        echo form_open('searchfilter/productsearch');
-        $data=array('name'=>'search','class'=>'searchbox','placeholder'=>'Search By Product Name..');
-        echo form_input($data);
-       ?>
-        <input type="submit" value=" " >
-        <?php 
-
-        echo form_close();
-        ?>
-        
-         
-        </form>
-      </div>    
-    </div>  
-    </div>
-</div>
-<!-- video complete -->
 
 
     <script>window.jQuery || document.write('<script src="<?php echo  base_url(); ?>/application/assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
@@ -64,45 +36,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
           <div class="tab-pane active text-style" id="tab1">
             <div class=" con-w3l">
             <!-- loop -->
-            <?php if(count($product_name) ):
-
-
-               foreach($product_name as $product_name):
-                $name=$product_name->product_name;
-              $len=strlen($name);
-                
-
-                if($len>=15)
-                {
-                  $sortcontent=substr($name,0,15).' ...';
-                }
-                else
-                {
-                  $sortcontent=substr($name,0,15);
-                }
-              ?>               
-               
+            <?php if(count($searchresult) ):
+               foreach($searchresult as $product_name):?>
               
               <div class="col-md-3 m-wthree">
                 <div class="col-m">               
-
-
-                  <a href="#"  class="offer-img">
-
-
-                  <a href="<?php echo site_url('singlepage/productdetail/'.$product_name->pk_product_id); ?>"  class="offer-img">
-
-
+                  <a href="<?php echo site_url('singlepage/productdetail/'.$product_name->pk_product_id); ?>""  class="offer-img">
                     <img class="img-responsive Images_main" src="<?php echo  base_url().'/application/assets/'.$product_name->product_photo; ?>"
                       alt="">
-                   <div class="offer"><p><span>Offer</span></p></div>
+                   
                   </a>
                   <div class="mid-1">
                     <div class="women">
-
-
-                     <h6><a href="<?php echo site_url('singlepage/productdetail/'.$product_name->pk_product_id); ?>" class="productname_main"><?php echo $sortcontent ?></a></h6>              
-
+                      <h6><a href="<?php echo site_url('singlepage/productdetail/'.$product_name->pk_product_id); ?>"><?php echo $product_name->product_name ?></a></h6>              
                     </div>
                     <div class="mid-2">
                       <p >Rs.<?php echo $product_name->product_price ?></p>

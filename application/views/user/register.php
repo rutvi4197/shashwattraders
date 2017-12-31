@@ -15,21 +15,26 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <?php include_once('main_header.php'); ?>
 
         
-   <div class="banner-top">
+ <div class="banner-top">
   <div class="container">
-    <h3 >Login</h3>
-     <h4><a href="<?php echo site_url('home'); ?>">Home</a><label>/</label>Login</h4>
+    <h3 >Register</h3>
+    <h4><a href="<?php echo site_url('home'); ?>">Home</a><label>/</label>Register</h4>
     <div class="clearfix"> </div>
   </div>
 </div>
+
 <!--login-->
 
   <div class="login">
-  
     <div class="main-agileits">
-        <div class="form-w3agile">
-          <h3>Login</h3>
-          <form action="<?php echo site_url('login/userlogin') ?>" method="post">
+        <div class="form-w3agile form1"> 
+          <h3>Register</h3>
+          <form action="<?php echo site_url('register/userregister');?>" method="post">
+            <div class="key">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <input  type="text" value="Username" name="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" required="">
+              <div class="clearfix"></div>
+            </div>
             <div class="key">
               <i class="fa fa-envelope" aria-hidden="true"></i>
               <input  type="text" value="Email" name="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
@@ -40,17 +45,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
               <input  type="password" value="Password" name="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
               <div class="clearfix"></div>
             </div>
-            <input type="submit" value="Login">
+            <div class="key">
+              <i class="fa fa-lock" aria-hidden="true"></i>
+              <input  type="password" value="Confirm Password" name="Confirm Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Confirm Password';}" required="">
+              <div class="clearfix"></div>
+            </div>
+            <input type="submit" value="Submit">
           </form>
         </div>
-        <div class="forg">
-          <a href="#" class="forg-left">Forgot Password</a>
-          <a href="register.html" class="forg-right">Register</a>
-        <div class="clearfix"></div>
-        </div>
+        
       </div>
     </div>
-
 <!--footer-->
 <?php include_once('footer.php'); ?>
 <!-- smooth scrolling -->

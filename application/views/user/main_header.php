@@ -68,13 +68,13 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
     <div class="container">
       
       <div class="logo">
-       <h1 ><a href="index.html">Shashwat Traders<span>The Best Choice for AGgarbatti</span></a></h1>
+       <h1 ><a href="index.html">Shashwat Traders<span>The Best Choice for Aggarbatti</span></a></h1>
       </div>
       <div class="head-t">
         <ul class="card">
           <li><a href="wishlist.html" ><i class="fa fa-heart" aria-hidden="true"></i>Wishlist</a></li>
           <li><a href="<?php echo site_url('login/'); ?>" ><i class="fa fa-user" aria-hidden="true"></i>Login</a></li>
-          <li><a href="register.html" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Register</a></li>
+          <li><a href="<?php echo site_url('register/'); ?>" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Register</a></li>
           <li><a href="about.html" ><i class="fa fa-file-text-o" aria-hidden="true"></i>Order History</a></li>
           <li><a href="shipping.html" ><i class="fa fa-ship" aria-hidden="true"></i>Shipping</a></li>
         </ul> 
@@ -122,7 +122,10 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                           foreach($brand_name as $brand_name):
                            
                         ?>
-                        <li><a href="<?php echo site_url('brandwisesearch/search/'.$brand_name->pk_brand_id); ?>"><i class="fa fa-angle-right" aria-hidden="true"></i><?php echo $brand_name->brand_name; ?> </a></li>
+
+                        <li><a href="<?php echo site_url('searchfilter/brandsearch/'.$brand_name->pk_brand_id); ?>"><i class="fa fa-angle-right" aria-hidden="true"></i><?php echo $brand_name->brand_name; ?> </a></li>
+
+                       
                        
                       <?php endforeach; 
                     endif;
@@ -135,6 +138,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                   </div>  
                 </ul>
               </li>
+
               <li class="dropdown">
               
                 <a href="#" class="dropdown-toggle hyper" data-toggle="dropdown" ><span> Category  <b class="caret"></b></span></a>
@@ -148,7 +152,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                           foreach($category_name as $category_name):
 
                         ?>
-                        <li><a href="care.html"><i class="fa fa-angle-right" aria-hidden="true"></i> <?php echo $category_name->cat_name; ?> </a></li>
+                         <li><a href="<?php echo site_url('searchfilter/categorysearch/'.$category_name->pk_cat_id); ?>"><i class="fa fa-angle-right" aria-hidden="true"></i><?php echo $category_name->cat_name; ?> </a></li>
+
+                       
                         <?php endforeach; 
                     endif;
                     ?>
@@ -160,6 +166,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                   </div>  
                 </ul>
               </li>
+
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle hyper" data-toggle="dropdown" ><span>Packing Type<b class="caret"></b></span></a>
                 <ul class="dropdown-menu multi multi1">
@@ -173,16 +180,15 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                           foreach($packing_name as $packing_name):
 
                         ?>
-                        <li><a href="hold.html"><i class="fa fa-angle-right" aria-hidden="true"></i><?php  echo $packing_name->pt_name; ?></a></li>
-                       
+                        <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i><?php echo $packing_name->pt_name; ?> </a></li>
+
+                      
                      <?php endforeach; 
                     endif;
                     ?>
                       </ul>
                     </div>
-                    <div class="col-sm-3 w3l">
-                      <a href="hold.html"><img src="<?php echo base_url();?>/assets/images/me2.png" class="img-responsive" alt=""></a>
-                    </div>
+                  
                     <div class="clearfix"></div>
                   </div>  
                 </ul>
@@ -210,7 +216,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                       <ul class="multi-column-dropdown">
                         <?php    }
                         ?>
-                        <li><a href="hold.html"><i class="fa fa-angle-right" aria-hidden="true"></i><?php  echo $fragrance_name->fragrance_name ?></a></li>
+                        <li><a href="<?php echo site_url('searchfilter/fragrancesearch/'.$fragrance_name->fragrance_id); ?>"><i class="fa fa-angle-right" aria-hidden="true"></i><?php  echo $fragrance_name->fragrance_name ?></a></li>
                        
                      <?php endforeach; 
                     endif;

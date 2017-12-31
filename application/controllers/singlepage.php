@@ -10,14 +10,21 @@ class Singlepage extends CI_controller
 		
 		$this->load->model('product');
 		$cat['product_name']=$this->product->fetchproduct();
+
 		$cat['product_detail']=$this->product->fetchproductbyid($product_id);
 		$cat['fragrance_detail']=$this->product->fetchfragrancebyproid($product_id);
+		$cat['brand_product_name']=$this->product->productsearchbybrand($product_id);
 		
+
 		$this->load->model('category');
 		$cat['category_name']=$this->category->fetchcat();
 
 		$this->load->model('packingtype');
 		$cat['packing_name']=$this->packingtype->fetchpack();
+
+		$this->load->model('fragrance');
+		$cat['fragrance_name']=$this->fragrance->fetchfra();
+
 
 		$this->load->view('user/single',$cat);
 	}
