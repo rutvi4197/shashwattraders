@@ -14,13 +14,14 @@
 							 <?php if(count($product_detail) ):
                foreach($product_detail as $product_detail):?>
 	   		<div class="col-md-5 single-top" >
-	   		<div class="single-w3agile" style="height: 470px;">
+	   		<div class="single-w3agile" >
 							
 <div id="picture-frame">
 
+
+
 			
-	
-			<img src="<?php echo  base_url().'/application/assets/'.$product_detail->product_photo; ?>" data-src="<?php echo  base_url().'/application/assets/'.$product_detail->product_photo; ?>" alt="" class="img-responsive"/>
+			<img src="<?php echo  base_url().'/application/assets/'.$product_detail->product_photo; ?>" data-src="<?php echo  base_url().'/application/assets/'.$product_detail->product_photo; ?>" alt="" class="img-responsive" />
 		</div>
 										<script src="<?php echo base_url();?>/application/assets/js/jquery.zoomtoo.js"></script>
 								<script>
