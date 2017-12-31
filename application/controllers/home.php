@@ -4,7 +4,7 @@ class Home extends CI_controller
 {
 	public function index()
 	{
-		$this->load->helper('form');
+		
 
 		$this->load->model('brand');
 		$cat['brand_name']=$this->brand->fetchbrand();
