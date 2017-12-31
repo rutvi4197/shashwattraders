@@ -15,7 +15,7 @@ class User extends CI_Model
 	}
 	public function Register($email_id,$password,$user_name,$user_add1,$user_add2,$user_city,$user_pincode,$user_type)
 	{
-		$q=$this->db->query("insert into user_tbl values('$email_id','$password','$user_name','$user_add'
+		$q=$this->db->query("insert into user_tbl values('$email_id','$password','$user_name','$user_add1'
 			,'$user_add2','$user_city','$user_pincode','$user_type')");
 	}
 	
