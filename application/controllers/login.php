@@ -34,12 +34,17 @@ class Login extends CI_controller
 		if($this->user->Authentication($email_id,$password))
 		{
 				$this->session->set_userdata('email_id',$email_id);
-				echo 'login sucessfully'; 
+				redirect('home');
 		}
 		else {
 			echo 'Password Invalid';
 		}
 
+	}
+	public function logout()
+	{
+		$this->session->unset_userdata('email_id');
+		redirect('home');
 	}
 
 }

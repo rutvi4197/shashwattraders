@@ -12,8 +12,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
   <!-- header -->
 
-<?php include_once('login_header.php'); ?>
+<?php 
 
+if($this->session->userdata('email_id'))
+{
+include_once('login_header.php'); 
+}
+else
+{
+  include_once('main_header.php');
+}
+?>
         
           <!--video-->
        

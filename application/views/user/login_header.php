@@ -229,13 +229,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                 </ul>
               </li>
               <li><a href="contact.php" class="hyper"><span>Contact Us</span></a></li>
+
+              <li style="margin-left: 442px;"><a href="<?php echo site_url('login/logout'); ?>" class="hyper"><span>Logout</span></a></li>
             </ul>
           </div>
           </nav>
-          <div class="cart" >
           
-            <span class="fa fa-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
-          </div>
           <div class="clearfix"></div>
         </div>
 
