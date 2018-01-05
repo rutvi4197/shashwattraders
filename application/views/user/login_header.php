@@ -234,9 +234,10 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
             </ul>
           </div>
           </nav>
-          
+         
           <div class="clearfix"></div>
         </div>
+
 
 <!-- //smooth scrolling -->
 <!-- for bootstrap working -->
