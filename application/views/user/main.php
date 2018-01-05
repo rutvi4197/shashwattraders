@@ -27,7 +27,7 @@ else
           <!--video-->
        
 
-<div class="video_height" data-vide-bg="<?php echo  base_url(); ?>/application/assets/video/agarbatti">
+<div class="video_height" data-vide-bg="<?php echo  base_url(); ?>application/assets/video/agarbatti">
     <div class="container">
     <div class="banner-info">
      
