@@ -12,7 +12,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
   <!-- header -->
 
-<?php include_once('main_header.php'); ?>
+<?php include_once('login_header.php'); ?>
 
         
           <!--video-->
