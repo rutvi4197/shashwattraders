@@ -29,7 +29,7 @@ class Login extends CI_controller
 
 		$email_id=$this->input->post('Email');
 		$password=$this->input->post('Password');
-		echo $email_id.$password;
+		//echo $email_id.$password;
 		$this->load->model('user');
 		if($this->user->Authentication($email_id,$password))
 		{
@@ -39,8 +39,34 @@ class Login extends CI_controller
 		else {
 			echo 'Password Invalid';
 		}
-
 	}
+	public function change()
+	{
+		$password=$this->input->post('Password');
+		$newpassword=$this->input->post('NewPassword');
+		$confirmpassword=$this->input->post('ConfirmPassword');
+	
+		//echo $email_id.$password;
+		$this->load->model('user');
+
+		if($newpassword==$confirmpassword)
+		{
+			if($this->user->Changepassword($email_id,$confirmpassword))
+			{
+				echo 'Password Changed Successfully';
+				redirect('home');
+			}
+			else 
+			{
+				echo 'Password Invalid';
+			}
+		}
+		else 
+		{
+			echo 'Password Does not Match';
+		}
+	}
+
 	public function logout()
 	{
 		$this->session->unset_userdata('email_id');

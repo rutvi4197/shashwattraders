@@ -61,8 +61,28 @@ class Register extends CI_controller
 		{
 			echo 'Password and Confirm Password are not matched.';
 		}
+	}
 
+	public function changepassword()
+	{
+		$this->load->model('brand');
+		$cat['brand_name']=$this->brand->fetchbrand();
+		
 
+		$this->load->model('product');
+		$cat['product_name']=$this->product->fetchproduct();
+
+		$this->load->model('category');
+		$cat['category_name']=$this->category->fetchcat();
+
+		$this->load->model('packingtype');
+		$cat['packing_name']=$this->packingtype->fetchpack();
+
+		$this->load->model('fragrance');
+		$cat['fragrance_name']=$this->fragrance->fetchfra();
+
+		$this->load->view('user/changepassword');
+		
 	}
 
 }

@@ -13,6 +13,17 @@ class User extends CI_Model
 		else
 			return false;
 	}
+	public function Changepassword($email_id,$changepassword)
+	{
+
+		$q=$this->db->query("update user_tbl set user_password='$changepassword' 
+			where pk_user_email_id='$email_id'");
+
+		if($q->num_rows())
+			return true;
+		else
+			return false;
+	}
 	public function Register($email_id,$password,$user_name,$user_add1,$user_add2,$user_city,$user_pincode,$user_type)
 	{
 		$q=$this->fb->query("select * from user_tbl where pk_user_email_id='$email_id'");
