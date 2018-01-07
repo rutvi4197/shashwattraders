@@ -11,12 +11,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body>
 
   <!-- header -->
-
 <?php 
 
 if($this->session->userdata('email_id'))
 {
-include_once('login_header.php'); 
+include_once('header.php'); 
 }
 else
 {

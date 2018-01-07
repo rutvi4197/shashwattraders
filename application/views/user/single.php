@@ -10,7 +10,7 @@
 
 if($this->session->userdata('email_id'))
 {
-include_once('login_header.php'); 
+include_once('header.php'); 
 }
 else
 {
@@ -97,11 +97,13 @@ else
 					<li><a href="#" class="icon dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i><span></span></a></li>
 				</ul>
 					<div class="add add-3">
-										   <button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="Wheat" data-summary="summary 1" data-price="6.00" data-quantity="1" data-image="images/si.jpg">Add to Cart</button>
-										</div>
-				
+										   <button class="btn btn-danger my-cart-btn my-cart-b">Add to Cart</button>
+
+										   <button class="btn btn-danger my-cart-btn my-cart-b " ><i class="fa fa-heart" aria-hidden="true"></i></button>
+										
+									 <button class="btn btn-danger my-cart-btn my-cart-b">Buy Now</button>
 				 
-			   
+			   </div>
 			<div class="clearfix"> </div>
 			</div>
 		 
