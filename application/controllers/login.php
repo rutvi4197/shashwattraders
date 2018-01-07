@@ -40,32 +40,7 @@ class Login extends CI_controller
 			echo 'Password Invalid';
 		}
 	}
-	public function change()
-	{
-		$password=$this->input->post('Password');
-		$newpassword=$this->input->post('NewPassword');
-		$confirmpassword=$this->input->post('ConfirmPassword');
 	
-		//echo $email_id.$password;
-		$this->load->model('user');
-
-		if($newpassword==$confirmpassword)
-		{
-			if($this->user->Changepassword($email_id,$confirmpassword))
-			{
-				echo 'Password Changed Successfully';
-				redirect('home');
-			}
-			else 
-			{
-				echo 'Password Invalid';
-			}
-		}
-		else 
-		{
-			echo 'Password Does not Match';
-		}
-	}
 
 	public function logout()
 	{

@@ -84,5 +84,37 @@ class Register extends CI_controller
 		$this->load->view('user/changepassword');
 		
 	}
+	public function changepass()
+	{
+		$password=$this->input->post('Password');
+		$newpassword=$this->input->post('NewPassword');
+		$confirmpassword=$this->input->post('ConfirmPassword');
+		$email_id=$this->session->userdata('email_id');
+		
+		$this->load->model('user');
+		if($this->user->checkpassword($email_id,$password))
+		{
+		if($newpassword==$confirmpassword)
+		{
+			if($this->user->Changepassword($email_id,$confirmpassword))
+			{
+				echo 'Password Changed Successfully';
+				redirect('home');
+			}
+			else 
+			{
+				echo 'Password Invalid';
+			}
+		}
+		else 
+		{
+			echo 'Password Does not Match';
+		}
+	}
+	else
+	{
+		echo 'old password is Invalid';
+	}
+	}
 
 }

@@ -16,7 +16,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 if($this->session->userdata('email_id'))
 {
-include_once('login_header.php'); 
+include_once('header.php'); 
 }
 else
 {
@@ -38,7 +38,7 @@ else
     <div class="main-agileits">
         <div class="form-w3agile form1"> 
           <h3>Change Password</h3>
-          <form action="<?php echo site_url('login/change');?>" method="post">
+          <form action="<?php echo site_url('register/changepass');?>" method="post">
            
             <div class="key">
               <i class="fa fa-lock" aria-hidden="true"></i>
