@@ -73,7 +73,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
       <div class="head-t">
         <ul class="card">
           <li><a href="wishlist.html" ><i class="fa fa-heart" aria-hidden="true"></i>Wishlist</a></li>
-          <li><a href="<?php echo site_url('login'); ?>" ><i class="fa fa-user" aria-hidden="true"></i>View Profile</a></li>
+          <li><a href="<?php echo site_url('viewprofile'); ?>" ><i class="fa fa-user" aria-hidden="true"></i>View Profile</a></li>
 
           <li><a href="<?php echo site_url('register/changepassword'); ?>" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Change Password</a></li>
 
