@@ -10,7 +10,7 @@
 
 if($this->session->userdata('email_id'))
 {
-include_once('login_header.php'); 
+include_once('header.php'); 
 }
 else
 {
