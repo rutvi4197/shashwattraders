@@ -78,10 +78,7 @@ else
 
                		<?php echo $fragrance_detail->fragrance_name ?>,
 
-               		  <?php endforeach;
-                  endif;
-                    ?>
-
+               		  
                </td>
 					</tr>
 					<tr>
@@ -89,7 +86,12 @@ else
 						<td> <?php echo $product_detail->type_name ?></td>
 					</tr>
 				</table>
-			
+			<?php 
+
+			$id=$product_detail->pk_product_id;
+		endforeach;
+                  endif;
+                    ?>
 				<ul class="social-top">
 					<li><a href="#" class="icon facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span></span></a></li>
 					<li><a href="#" class="icon twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span></span></a></li>
@@ -97,16 +99,18 @@ else
 					<li><a href="#" class="icon dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i><span></span></a></li>
 				</ul>
 					<div class="add add-3">
-										   <button class="btn btn-danger my-cart-btn my-cart-b">Add to Cart</button>
+											<a href="<?php echo site_url('singlepage/addtocart/'.$id); ?>">
+										   <button class="btn btn-danger my-cart-btn my-cart-b">Add to Cart</button></a>
 
 										   <button class="btn btn-danger my-cart-btn my-cart-b " ><i class="fa fa-heart" aria-hidden="true"></i></button>
 										
-									 <button class="btn btn-danger my-cart-btn my-cart-b">Buy Now</button>
-				 
+											<button class="btn btn-danger my-cart-btn my-cart-b">Buy Now</button>
+						 
 			   </div>
 			<div class="clearfix"> </div>
 			</div>
 		 
+
 
 			</div>
 		   <div class="clearfix"> </div>
