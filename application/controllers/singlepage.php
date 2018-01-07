@@ -28,4 +28,8 @@ class Singlepage extends CI_controller
 
 		$this->load->view('user/single',$cat);
 	}
+	public function addtocart($product_id)
+	{
+		echo $product_id;
+	}
 }
