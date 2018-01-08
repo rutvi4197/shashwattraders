@@ -77,21 +77,22 @@ else
                foreach($fragrance_detail as $fragrance_detail):?>
 
                		<?php echo $fragrance_detail->fragrance_name ?>,
-
-               		  
-               </td>
-					</tr>
-					<tr>
-						<td>Bathi Type </td>
-						<td> <?php echo $product_detail->type_name ?></td>
-					</tr>
-				</table>
-			<?php 
+		<?php 
 
 			$id=$product_detail->pk_product_id;
 		endforeach;
                   endif;
                     ?>
+               		  
+               </td>
+					</tr>
+				
+					<tr>
+						<td>Bathi Type </td>
+						<td> <?php echo $product_detail->type_name ?></td>
+					</tr>
+				</table>
+		
 				<ul class="social-top">
 					<li><a href="#" class="icon facebook"><i class="fa fa-facebook" aria-hidden="true"></i><span></span></a></li>
 					<li><a href="#" class="icon twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span></span></a></li>
