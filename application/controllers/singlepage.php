@@ -30,6 +30,13 @@ class Singlepage extends CI_controller
 	}
 	public function addtocart($product_id)
 	{
-		echo $product_id;
+		//echo $product_id;
+		$this->load->model('order');
+		$email_id=$this->session->userdata('email_id');
+		$d1=date('d-m-Y');
+		//echo $d1;
+		
+		$cat['order_name']=$this->order->fetchorderbyid($email_id,$product_id,$d1);
+			
 	}
 }

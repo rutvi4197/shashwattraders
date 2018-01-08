@@ -34,13 +34,13 @@ class User extends CI_Model
 		else
 			return false;
 	}
-	public function Register($email_id,$password,$user_name,$user_add1,$user_add2,$user_city,$user_pincode,$user_type)
+	public function Register($email_id,$password,$user_name,$user_add1,$user_add2,$user_city,$user_pincode,$user_type,$user_mobile_no)
 	{
-		$q=$this->fb->query("select * from user_tbl where pk_user_email_id='$email_id'");
+		$q=$this->db->query("select * from user_tbl where pk_user_email_id='$email_id'");
 		if($q->num_rows==0)
 		{
 		$p=$this->db->query("insert into user_tbl values('$email_id','$password','$user_name','$user_add1'
-			,'$user_add2','$user_city','$user_pincode','$user_type')");
+			,'$user_add2','$user_city','$user_pincode','$user_type','$user_mobile_no')");
 
 		}
 		else
