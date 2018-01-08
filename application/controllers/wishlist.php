@@ -26,7 +26,7 @@ class wishlist extends CI_controller
 		else{
 		$this->load->model('order');
 		$cat['wish_detail']=$this->order->fetchwishlist($this->session->userdata('email_id'));
-		$this->load->view('user/wishlist');
+		$this->load->view('user/wishlist',$cat);
 		}
 	} 
 }

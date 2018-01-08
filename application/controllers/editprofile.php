@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Viewprofile extends CI_controller
+class Editprofile extends CI_controller
 
 {
 	public function index()
@@ -26,7 +26,27 @@ class Viewprofile extends CI_controller
 		$this->load->model('myprofile');
 		$cat['user_data']=$this->myprofile->fetchdata($email_id);
 
-		$this->load->view('user/viewprofile',$cat);
+		$this->load->view('user/editprofile',$cat);
 	}
+	public function edit()
+	{
+
+		$email_id=$this->input->post('Email');
+		$name=$this->input->post('Name');
+		$mobile=$this->input->post('Mobileno');
+		$add1=$this->input->post('Address1');
+		$add2=$this->input->post('Address2');
+		$city=$this->input->post('City');
+		//echo $email_id.$password;
+		$this->load->model('myprofile');
+		if($this->myprofile->editprofile($email_id,$name,$add1,$add2,$city,$mobile))
+		{
+				echo redirect('viewprofile');
+		}
+		else {
+			echo 'Invalid';
+		}
+	}
+
 
 }

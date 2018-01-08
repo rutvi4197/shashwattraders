@@ -24,11 +24,11 @@ else
 }
 ?>
 
-         
+        
    <div class="banner-top">
   <div class="container">
-    <h3 >View Profile</h3>
-     <h4><a href="<?php echo site_url('home'); ?>">Home</a><label>/</label>View Profile</h4>
+    <h3 >Edit Profile</h3>
+     <h4><a href="<?php echo site_url('home'); ?>">Home</a><label>/</label>Edit Profile</h4>
     <div class="clearfix"> </div>
   </div>
 </div>
@@ -38,9 +38,8 @@ else
   
     <div class="main-agileits">
         <div class="form-w3agile">
-          <h3>My Profile</h3>
-          
-            <?php 
+          <h3>Edit Profile</h3>
+          <?php 
               if(count($user_data) ):
                foreach($user_data as $user_data):
                 $name=$user_data->user_name;
@@ -54,43 +53,40 @@ else
                 endforeach;
                 endif;
             ?> 
-            <div class="key">
+            
+          <form action="<?php echo site_url('editprofile/edit') ?>" method="post">
+             <div class="key">
               <i class="fa fa-envelope" aria-hidden="true"></i>
               <input  type="text" value="<?php echo $email_id; ?>" name="Email" readonly>
               <div class="clearfix"></div>
             </div>
             <div class="key">
               <i class="fa fa-user" aria-hidden="true"></i>
-              <input  type="text" value="<?php echo $name; ?>" name="Name" readonly >
+              <input  type="text" value="<?php echo $name; ?>" name="Name"  >
               <div class="clearfix"></div>
             </div>
             <div class="key">
               <i class="fa fa-mobile" aria-hidden="true"></i>
-              <input  type="text" value="<?php echo $mobile_no; ?>" name="Name" readonly="">
+              <input  type="text" value="<?php echo $mobile_no; ?>" name="Mobileno" >
               <div class="clearfix"></div>
             </div>
                <div class="key">
               <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <input  type="text" value="<?php echo $add1; ?>" name="Address1" readonly >
+              <input  type="text" value="<?php echo $add1; ?>" name="Address1" >
               <div class="clearfix"></div>
             </div>
                <div class="key">
               <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <input  type="text" value="<?php echo $add2; ?>" name="Address2" readonly >
+              <input  type="text" value="<?php echo $add2; ?>" name="Address2" >
               <div class="clearfix"></div>
             </div>
                <div class="key">
               <i class="fa fa-globe" aria-hidden="true"></i>
-              <input  type="text" value="<?php echo $city; ?>" name="City" readonly="">
+              <input  type="text" value="<?php echo $city; ?>" name="City" >
               <div class="clearfix"></div>
             </div>
-              
-            
-          
-        </div>
-        <div class="forg">
-          <a href="<?php echo site_url('editprofile'); ?>" class="forg-right">Edit Profile</a>
-        <div class="clearfix"></div>
+           <input type="submit" value="Edit">
+          </form>
         </div>
       </div>
     </div>
