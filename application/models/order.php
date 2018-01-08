@@ -9,5 +9,9 @@ class Order extends CI_Model
 		return $q->result();
 
 	}
+	public function fetchwishlist($email_id)
+	{
+		$q=$this->db->query("select * from order_tbl where fk_user_email_id='$email_id' and type=2 ");
+		return $q->result();
+	}
 }
-?>

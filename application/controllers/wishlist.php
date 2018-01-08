@@ -19,8 +19,14 @@ class wishlist extends CI_controller
 
 		$this->load->model('fragrance');
 		$cat['fragrance_name']=$this->fragrance->fetchfra();
-
+		if(!$this->session->userdata('email_id'))
+		{
+			echo redirect('login');
+		}
+		else{
 		$this->load->model('order');
+		$cat['wish_detail']=$this->order->fetchwishlist($this->session->userdata('email_id'));
 		$this->load->view('user/wishlist');
+		}
 	} 
 }
