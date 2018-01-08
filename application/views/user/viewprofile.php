@@ -41,12 +41,17 @@ else
           <h3>My Profile</h3>
           
             <?php 
-              //kevi rite profile ne load krine eno data lau?? and ene print karau value ma?????
-              //try kryo but error aai so pchi me ctr+z kri didhu.
+              if(count($user_data) ):
+               foreach($user_data as $user_data):
+                $name=$user_data->user_name;
+                $email_id=$user_data->pk_user_email_id;
+
+                endforeach;
+                endif;
             ?> 
             <div class="key">
               <i class="fa fa-envelope" aria-hidden="true"></i>
-              <input  type="text" value="Email" name="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" >
+              <input  type="text" value="<?php echo $email_id; ?>" name="Email" readonly>
               <div class="clearfix"></div>
             </div>
             <div class="key">

@@ -1,7 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Viewprofile extends CI_controller
-
+class wishlist extends CI_controller
 {
 	public function index()
 	{
@@ -20,23 +19,14 @@ class Viewprofile extends CI_controller
 
 		$this->load->model('fragrance');
 		$cat['fragrance_name']=$this->fragrance->fetchfra();
-
-		$email_id=$this->session->userdata('email_id');
-
-		$this->load->model('myprofile');
-		$cat['user_data']=$this->myprofile->fetchdata($email_id);
-
-		$this->load->view('user/viewprofile',$cat);
-	}
-
-		
-	
-	
-
-	public function logout()
-	{
-		$this->session->unset_userdata('email_id');
-		redirect('home');
-	}
-
+		if(!$this->session->userdata('email_id'))
+		{
+			echo redirect('login');
+		}
+		else{
+		$this->load->model('order');
+		$cat['wish_detail']=$this->order->fetchwishlist($this->session->userdata('email_id'));
+		$this->load->view('user/wishlist');
+		}
+	} 
 }

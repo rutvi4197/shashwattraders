@@ -17,5 +17,9 @@ class Order extends CI_Model
 		$q=$this->db->query("select o.pk_order_id,p.product_name,o.order_date from order_tbl as o, product_tbl as p where p.pk_product_id=o.fk_pro_id and o.fk_user_email_id='$email_id' and type='$type'");
 		return $q->result();
 	}
+	public function fetchwishlist($email_id)
+	{
+		$q=$this->db->query("select * from order_tbl where fk_user_email_id='$email_id' and type=2 ");
+		return $q->result();
+	}
 }
-?>

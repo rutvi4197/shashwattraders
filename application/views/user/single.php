@@ -78,15 +78,14 @@ else
 
                		<?php echo $fragrance_detail->fragrance_name ?>,
 		<?php 
-
 			$id=$product_detail->pk_product_id;
-		endforeach;
-                  endif;
-                    ?>
+			endforeach;
+           	endif;
+        ?>
                		  
                </td>
 					</tr>
-				
+
 					<tr>
 						<td>Bathi Type </td>
 						<td> <?php echo $product_detail->type_name ?></td>
