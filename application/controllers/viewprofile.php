@@ -21,18 +21,16 @@ class Viewprofile extends CI_controller
 		$this->load->model('fragrance');
 		$cat['fragrance_name']=$this->fragrance->fetchfra();
 
-		
-		$this->load->view('user/viewprofile');
-	}
-
-	public function profile($email_id)
-	{
+		$email_id=$this->session->userdata('email_id');
 
 		$this->load->model('myprofile');
 		$cat['user_data']=$this->myprofile->fetchdata($email_id);
 
-		
+		$this->load->view('user/viewprofile',$cat);
 	}
+
+		
+	
 	
 
 	public function logout()
