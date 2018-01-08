@@ -42,10 +42,11 @@ class User extends CI_Model
 		$p=$this->db->query("insert into user_tbl values('$email_id','$password','$user_name','$user_add1'
 			,'$user_add2','$user_city','$user_pincode','$user_type','$user_mobile_no')");
 
-		}
+		if($this->db->affected_rows() >= 0)
+			return true;
 		else
-		{
 			return false;
+
 		}
 	}
 	

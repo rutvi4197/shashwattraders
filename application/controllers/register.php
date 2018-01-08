@@ -37,20 +37,21 @@ class Register extends CI_controller
 		$user_city='null';
 		$user_pincode=0;
 		$user_type="user";
+		$user_mobile_no=0;
 
 
-		echo $email_id.'</br>';
-		echo $password.'</br>';
-		echo $cpassword.'</br>';
+		// echo $email_id.'</br>';
+		// echo $password.'</br>';
+		// echo $cpassword.'</br>';
 		if($password==$cpassword)
 		{
 			
 			$this->load->model('user');
-			if($this->user->Register($email_id,$password,$user_name,$user_add1,$user_add2,$user_city,$user_pincode,$user_type))
+			if($this->user->Register($email_id,$password,$user_name,$user_add1,$user_add2,$user_city,$user_pincode,$user_type,$user_mobile_no))
 			{
 			
 					$this->session->set_userdata('email_id',$email_id);
-					echo 'login sucessfully'; 
+					echo redirect('home');
 			}
 			else 
 			{

@@ -76,7 +76,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
           <li><a href="<?php echo site_url('login'); ?>" ><i class="fa fa-user" aria-hidden="true"></i>Login</a></li>
           <li><a href="<?php echo site_url('register'); ?>" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Register</a></li>
           <li><a href="about.html" ><i class="fa fa-file-text-o" aria-hidden="true"></i>Order History</a></li>
-          <li><a href="shipping.html" ><i class="fa fa-ship" aria-hidden="true"></i>Shipping</a></li>
+          <li><a href="shipping.html" ><i class="fa fa-ship" aria-hidden="true"></i>View Cart</a></li>
         </ul> 
       </div>
       
@@ -232,10 +232,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
             </ul>
           </div>
           </nav>
-          <div class="cart" >
           
-            <span class="fa fa-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
-          </div>
+          <a href="cart.php">
+          <div class="cart" >
+            <span class="fa fa-shopping-cart my-cart-icon">Cart
+            </span>
+          </div></a>
           <div class="clearfix"></div>
         </div>
 
