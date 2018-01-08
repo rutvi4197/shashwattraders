@@ -45,11 +45,11 @@ else
           <div class="tab-pane active text-style" id="tab1">
             <div class=" con-w3l">
             <!-- loop -->
-              <table class="table" border=1>
+              <table class="table">
 
                 <tr>
-                  <th> Order ID </th>
-                  <th> Product Name </th>
+                  <th> Image </th>
+                  <th> Product Description </th>
                   <th> Date </th>
                   <th> Delete </th>
                 </tr>
@@ -59,7 +59,7 @@ else
               
   
                 <tr>
-                  <td><?php echo $cart_view->pk_order_id ?></td>
+                  <td><img height=70 width=100 src="<?php echo  base_url().'/application/assets/'.$cart_view->product_photo ?>"></td>
                   <td><?php echo $cart_view->product_name ?></td>
                   <td><?php echo $cart_view->order_date ?></td>
                   <td><button>delete</button></td>
