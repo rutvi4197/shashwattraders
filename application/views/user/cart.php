@@ -7,6 +7,18 @@
 <meta property="og:title" content="Vide" />
 <meta name="keywords" content="Big store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+<style type="text/css">
+
+tr:nth-child(odd){
+  background-color: lightgray;
+}
+
+tbody{
+  font-size: 160% !important;
+}
+
+</style>
 </head>
 <body>
 
@@ -62,7 +74,7 @@ else
                   <td><img height=70 width=100 src="<?php echo  base_url().'/application/assets/'.$cart_view->product_photo ?>"></td>
                   <td><?php echo $cart_view->product_name ?></td>
                   <td><?php echo $cart_view->order_date ?></td>
-                  <td><button>delete</button></td>
+                  <td><button>Delete</button></td>
                 </tr>
                  <?php endforeach;
                   endif;
