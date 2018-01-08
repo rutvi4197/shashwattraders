@@ -119,7 +119,7 @@ else
                       <div class="clearfix"></div>
                     </div>
                     <div class="add">
-                      <a href="<?php echo site_url('singlepage/productdetail/'.$product_name->pk_product_id); ?>">
+                      <a href="<?php echo site_url('singlepage/addtocart/'.$product_name->pk_product_id); ?>">
                        <button class="btn btn-danger my-cart-btn my-cart-b ">Add to Cart</button></a>
                     </div>
                     

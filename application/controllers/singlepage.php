@@ -35,7 +35,15 @@ class Singlepage extends CI_controller
 		$email_id=$this->session->userdata('email_id');
 		$d1=date('d-m-Y');
 		
-		$cat['order_name']=$this->order->fetchorderbyid($email_id,$product_id,$d1);
-		echo redirect('cartview');		
+		$q=$this->db->query("select * from order_tbl where fk_pro_id='$product_id' and fk_user_email_id='$email_id'");
+		if($q->num_rows==0)
+		{
+			$cat['order_name']=$this->order->insertorderincart($email_id,$product_id,$d1);
+			echo redirect('cartview');		
+		}
+		else
+		{
+			echo redirect('cartview');
+		}
 	}
 }
