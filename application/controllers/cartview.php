@@ -1,9 +1,9 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Singlepage extends CI_controller
+class Cartview extends CI_controller
 {
 
-	public function productdetail($product_id)
+	public function index()
 	{
 		$this->load->model('brand');
 		$cat['brand_name']=$this->brand->fetchbrand();
@@ -25,17 +25,13 @@ class Singlepage extends CI_controller
 		$this->load->model('fragrance');
 		$cat['fragrance_name']=$this->fragrance->fetchfra();
 
-
-		$this->load->view('user/single',$cat);
-	}
-	public function addtocart($product_id)
-	{
-		//echo $product_id;
+		
 		$this->load->model('order');
 		$email_id=$this->session->userdata('email_id');
-		$d1=date('d-m-Y');
+		$type=1;
+
+		$cat['cart_view']=$this->order->fetchorderbyemail($email_id,$type);
 		
-		$cat['order_name']=$this->order->fetchorderbyid($email_id,$product_id,$d1);
-		echo redirect('cartview');		
+		$this->load->view('user/cart',$cat);
 	}
 }
