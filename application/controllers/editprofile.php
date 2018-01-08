@@ -41,7 +41,7 @@ class Editprofile extends CI_controller
 		$this->load->model('myprofile');
 		if($this->myprofile->editprofile($email_id,$name,$add1,$add2,$city,$mobile))
 		{
-				echo 'Updated Successfully';
+				echo redirect('viewprofile');
 		}
 		else {
 			echo 'Invalid';

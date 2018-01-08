@@ -12,7 +12,7 @@ class Myprofile extends CI_Model
 		$q=$this->db->query("update user_tbl set user_name='$name',user_add1='$add1',user_add2='$add2',
 							 user_city='$city',user_mobile_no='$mobile' 
 							 where pk_user_email_id='$email_id'");
-		if($q->num_rows())
+		if($this->db->affected_rows() >= 0)
 			return true;
 		else
 			return false;
