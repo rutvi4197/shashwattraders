@@ -22,6 +22,15 @@ else
 {
   include_once('main_header.php');
 }
+
+
+if($this->session->flashdata('loginerror'))
+{
+  echo '<script langauge="javascript">;
+                alert("Invalid Email/Password..Please try again!!");
+               
+                </script>';
+}
 ?>
 
         
@@ -42,12 +51,12 @@ else
           <form action="<?php echo site_url('login/userlogin') ?>" method="post">
             <div class="key">
               <i class="fa fa-envelope" aria-hidden="true"></i>
-              <input  type="text" value="Email" name="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+              <input  type="text" value="Email" name="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required>
               <div class="clearfix"></div>
             </div>
             <div class="key">
               <i class="fa fa-lock" aria-hidden="true"></i>
-              <input  type="password" value="Password" name="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
+              <input  type="password" value="Password" name="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required>
               <div class="clearfix"></div>
             </div>
             <input type="submit" value="Login">
@@ -55,7 +64,7 @@ else
         </div>
         <div class="forg">
           <a href="#" class="forg-left">Forgot Password</a>
-          <a href="register.html" class="forg-right">Register</a>
+          <a href="<?php echo site_url('register'); ?>" class="forg-right">Register</a>
         <div class="clearfix"></div>
         </div>
       </div>

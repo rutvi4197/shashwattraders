@@ -75,7 +75,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
           <li><a href="<?php echo site_url('wishlist') ?>" ><i class="fa fa-heart" aria-hidden="true"></i>Wishlist</a></li>
           <li><a href="<?php echo site_url('login'); ?>" ><i class="fa fa-user" aria-hidden="true"></i>Login</a></li>
           <li><a href="<?php echo site_url('register'); ?>" ><i class="fa fa-arrow-right" aria-hidden="true"></i>Register</a></li>
-          <li><a href="about.html" ><i class="fa fa-file-text-o" aria-hidden="true"></i>Order History</a></li>
+          <li><a href="<?php echo site_url('orderhistory'); ?>" ><i class="fa fa-file-text-o" aria-hidden="true"></i>Order History</a></li>
             <li><a href="<?php echo site_url('cartview'); ?>" ><i class="fa fa-ship" aria-hidden="true"></i>View Cart</a></li>
         </ul> 
       </div>
@@ -93,8 +93,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- category -->
 <div class="nav-top">
           <nav class="navbar navbar-default">
-          
-          <div class="navbar-header nav_2">
+                  <div class="navbar-header nav_2">
             <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>

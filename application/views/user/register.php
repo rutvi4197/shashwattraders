@@ -22,6 +22,23 @@ else
 {
   include_once('main_header.php');
 }
+if($this->session->flashdata('registererror'))
+{
+  echo '<script langauge="javascript">;
+                alert("Not registered yet ..Please Try Again!!");
+               
+                </script>';
+}
+elseif($this->session->flashdata('passworderror'))
+{
+   echo '<script langauge="javascript">;
+                alert("Your Password are not matched..Please try again!!");
+               
+                </script>';
+}
+
+
+
 ?>
 
         
