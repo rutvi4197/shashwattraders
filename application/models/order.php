@@ -17,7 +17,7 @@ class Order extends CI_Model
 		}
 		else
 		{
-			return false;
+			echo redirect('cartview');
 		}
 	}
 	public function fetchorderbyemail($email_id,$type)
