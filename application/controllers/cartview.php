@@ -34,4 +34,19 @@ class Cartview extends CI_controller
 		$this->load->view('user/cart',$cat);
 		}
 	}
+	public function deleteorder($product_id)
+	{
+		$this->load->model('order');
+		$email_id=$this->session->userdata('email_id');
+		$type=1;
+
+		if(!$this->session->userdata('email_id'))
+		{
+			echo redirect('login');
+		}
+		else{
+		$this->order->deletecart($email_id,$product_id,$type);
+		echo redirect('cartview');
+		}
+	}
 }
