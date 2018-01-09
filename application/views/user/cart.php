@@ -82,7 +82,8 @@ else
                   <?php $sum=$cart_view->product_price*$cart_view->qty?>
                   <td>Rs.<?php echo $sum ?></td>
                    <?php $tot=$tot+$sum?>
-                  <td><a href="<?php echo site_url() ?>"><button class="btn btn-danger">Delete</button></a></td>
+                  <td><a href="<?php echo site_url('singlepage/addtocart/'.$cart_view->pk_product_id); ?>">
+                    <button class="btn btn-danger">Delete</button></a></td>
                 </tr>
                  <?php endforeach;
                   endif;
