@@ -65,33 +65,28 @@ else
                   <th> Price </th>
                   <th> Quantity </th>
                   <th> Total </th>
-                  <th> Delete </th>
+                  
                 </tr>
 
                 <?php $tot=0; ?>
-              <?php if(count($cart_view) ):
-              foreach($cart_view as $cart_view):?>
+              <?php if(count($order_history) ):
+              foreach($order_history as $order_history):?>
               
   
                 <tr>
-                  <td><img height=70 width=100 src="<?php echo  base_url().'/application/assets/'.$cart_view->product_photo ?>"></td>
-                  <td><?php echo $cart_view->product_name ?></td>
-                  <td>Rs.<?php echo $cart_view->product_price ?></td>
+                  <td><img height=70 width=100 src="<?php echo  base_url().'/application/assets/'.$order_history->product_photo ?>"></td>
+                  <td><?php echo $order_history->product_name ?></td>
+                  <td>Rs.<?php echo $order_history->product_price ?></td>
                  
-                  <td><input type="number" value="<?php echo $cart_view->qty ?>"></td>
-                  <?php $sum=$cart_view->product_price*$cart_view->qty?>
+                  <td><?php echo $order_history->qty ?></td>
+                  <?php $sum=$order_history->product_price*$order_history->qty?>
                   <td>Rs.<?php echo $sum ?></td>
                    <?php $tot=$tot+$sum?>
-                  <td><a href="<?php echo site_url() ?>"><button class="btn btn-danger">Delete</button></a></td>
-                </tr>
+                  </tr>
                  <?php endforeach;
                   endif;
                     
                ?>
-               <tr>
-                <td></td><td></td><td></td><td></td>
-                <td>Total Amount is <b>Rs.<?php echo $tot?></b></td>
-               </tr>
               </table>
 
               
