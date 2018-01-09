@@ -75,7 +75,7 @@ else
                   <td><?php echo $cart_view->product_name ?></td>
                   <td><?php echo $cart_view->order_date ?></td>
                   <td><a href="<?php echo site_url() ?>"><button class="btn btn-danger">Delete</button></a>
-                    <a href="<?php echo site_url() ?>"><button class="btn btn-success">Add to cart</button></a></td>
+                    <a href="<?php echo site_url("wishlist/updatecart/".$cart_view->fk_product_id); ?>"><button class="btn btn-success">Add to cart</button></a></td>
                 </tr>
                  <?php endforeach;
                   endif;
