@@ -25,8 +25,14 @@ class Cartview extends CI_controller
 		$email_id=$this->session->userdata('email_id');
 		$type=1;
 
+		if(!$this->session->userdata('email_id'))
+		{
+			echo redirect('login');
+		}
+		else{
 		$cat['cart_view']=$this->order->fetchorderbyemail($email_id,$type);
 		
 		$this->load->view('user/cart',$cat);
+		}
 	}
 }
