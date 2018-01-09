@@ -35,11 +35,13 @@ class wishlist extends CI_controller
 		$email_id=$this->session->userdata('email_id');
 		if($this->order->updatecart($product_id,$email_id))
 		{
-
+				echo redirect('cartview');
 		}
 		else
 		{
-			
+			 $this->session->set_flashdata('success','Something went Wrong');
+			 echo redirect('wishlist');
+               
 		}
 	}
 }
