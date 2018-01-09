@@ -29,4 +29,17 @@ class wishlist extends CI_controller
 		$this->load->view('user/wishlist',$cat);
 		}
 	} 
+	public function updatecart($product_id)
+	{
+		$this->load->model('order');
+		$email_id=$this->session->userdata('email_id');
+		if($this->order->updatecart($product_id,$email_id))
+		{
+
+		}
+		else
+		{
+			
+		}
+	}
 }
