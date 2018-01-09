@@ -7,11 +7,22 @@
 <meta property="og:title" content="Vide" />
 <meta name="keywords" content="Big store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+<style type="text/css">
+
+tr:nth-child(odd){
+  background-color: lightgray;
+}
+
+tbody{
+  font-size: 160% !important;
+}
+
+</style>
 </head>
 <body>
 
   <!-- header -->
-
 <?php 
 
 if($this->session->userdata('email_id'))
@@ -20,46 +31,69 @@ include_once('header.php');
 }
 else
 {
-  echo redirect('login');
- 
+ echo redirect('login');
 }
 ?>
 
-        
-   <div class="banner-top">
-  <div class="container">
-    <h3 >Wishlist</h3>
-     <h4><a href="<?php echo site_url('home'); ?>">Home</a><label>/</label>Wishlist</h4>
-    <div class="clearfix"> </div>
-  </div>
-</div>
-<!--wishlist-->
-<table class="table" border="1">
-          <tr>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Weight</td>
-            <td> </td>
-          </tr>
-          <tr>
-            <td>Burning Time </td>
-            <td> </td>
-          </tr>
-          <tr>
-            <td>Fragrance </td>
-            <td> 
+
+
+    <script>window.jQuery || document.write('<script src="<?php echo  base_url(); ?>/application/assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+    <script src="<?php echo  base_url(); ?>/application/assets/js/jquery.vide.min.js"></script>
+
+<!--content-->
+<div class="content-top ">
+  <div class="container ">
+    <div class="spec ">
+      <h3>Your Wishlist</h3>
+      <div class="ser-t">
+        <b></b>
+        <span><i></i></span>
+        <b class="line"></b>
+      </div>
+    </div>
+      <div class="tab-head ">
+       
+        <div class=" tab-content tab-content-t ">
+          <div class="tab-pane active text-style" id="tab1">
+            <div class=" con-w3l">
+            <!-- loop -->
+              <table class="table">
+
+                <tr>
+                  <th> Image </th>
+                  <th> Product Description </th>
+                  <th> Date </th>
+                  <th> Delete </th>
+                </tr>
+
+              <?php if(count($wish_detail) ):
+              foreach($wish_detail as $cart_view):?>
+              
+  
+                <tr>
+                  <td><img height=70 width=100 src="<?php echo  base_url().'/application/assets/'.$cart_view->product_photo ?>"></td>
+                  <td><?php echo $cart_view->product_name ?></td>
+                  <td><?php echo $cart_view->order_date ?></td>
+                  <td><a href="<?php echo site_url() ?>"><button class="btn btn-danger">Delete</button></a>
+                    <a href="<?php echo site_url() ?>"><button class="btn btn-success">Add to cart</button></a></td>
+                </tr>
+                 <?php endforeach;
+                  endif;
                     
-               </td>
-          </tr>
+               ?>
+              </table>
 
-          <tr>
-            <td>Bathi Type </td>
-            <td> </td>
-          </tr>
-        </table>
+              
  
+             </div>
+          </div>
+        </div>
 
+<!--content-->
+                           <div class="clearfix"></div>
+             </div>
+    </div>
+  </div>
 <!--footer-->
 <?php include_once('footer.php'); ?>
 <!-- smooth scrolling -->

@@ -31,7 +31,7 @@ include_once('header.php');
 }
 else
 {
-  include_once('main_header.php');
+  echo redirect('login');
 }
 ?>
 
@@ -74,7 +74,7 @@ else
                   <td><img height=70 width=100 src="<?php echo  base_url().'/application/assets/'.$cart_view->product_photo ?>"></td>
                   <td><?php echo $cart_view->product_name ?></td>
                   <td><?php echo $cart_view->order_date ?></td>
-                  <td><button>Delete</button></td>
+                  <td><a href="<?php echo site_url() ?>"><button class="btn btn-danger">Delete</button></a></td>
                 </tr>
                  <?php endforeach;
                   endif;
