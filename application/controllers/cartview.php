@@ -20,7 +20,6 @@ class Cartview extends CI_controller
 		$this->load->model('fragrance');
 		$cat['fragrance_name']=$this->fragrance->fetchfra();
 
-
 		$this->load->model('order');
 		$email_id=$this->session->userdata('email_id');
 		$type=1;
