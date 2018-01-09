@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Cartview extends CI_controller
+class Orderhistory extends CI_controller
 {
 
 	public function index()
@@ -22,31 +22,16 @@ class Cartview extends CI_controller
 
 		$this->load->model('order');
 		$email_id=$this->session->userdata('email_id');
-		$type=1;
+		$type=2;
 
 		if(!$this->session->userdata('email_id'))
 		{
 			echo redirect('login');
 		}
 		else{
-		$cat['cart_view']=$this->order->fetchorderbyemail($email_id,$type);
+		$cat['order_history']=$this->order->fetchorderhistorybyemail($email_id,$type);
 		
-		$this->load->view('user/cart',$cat);
-		}
-	}
-	public function deleteorder($product_id)
-	{
-		$this->load->model('order');
-		$email_id=$this->session->userdata('email_id');
-		$type=1;
-
-		if(!$this->session->userdata('email_id'))
-		{
-			echo redirect('login');
-		}
-		else{
-		$this->order->deletecart($email_id,$product_id,$type);
-		echo redirect('cartview');
+		$this->load->view('user/orderhistory',$cat);
 		}
 	}
 }
