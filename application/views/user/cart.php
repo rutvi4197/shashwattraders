@@ -83,7 +83,8 @@ else
                   <td>Rs.<?php echo $sum ?></td>
                    <?php $tot=$tot+$sum?>
                   <td><a href="<?php echo site_url('cartview/deleteorder/'.$cart_view->pk_product_id); ?>">
-                    <button class="btn btn-danger">Delete</button></a></td>
+                    <button class="btn btn-danger">Delete</button></a>
+                  </td>
                 </tr>
                  <?php endforeach;
                   endif;
@@ -91,11 +92,26 @@ else
                ?>
                <tr>
                 
+<<<<<<< HEAD
                 <td colspan="5" style="text-align: right;" >Total Amount is <b>Rs.<?php echo $tot?></b></td>
                 <td><a href="<?php echo site_url('cartview/buynow') ?>">
                   <button class="btn btn-success">Buy Now</button></a></td>
                
                </tr>
+=======
+                <td colspan="6" style="text-align: right;" >Total Amount is <b>Rs.<?php echo $tot?></b>
+
+                </td>
+              </tr>
+                <tr>
+                    <td colspan="6" style="text-align: right;">
+                      <a href="<?php echo site_url(); ?>">
+                    <button class="btn btn-primary">Check Out</button></a>
+                    </td>
+                </tr>
+              
+               
+>>>>>>> 8fe464b9513e3116ab01df51ceafed5f63f5de3d
               </table>
 
               

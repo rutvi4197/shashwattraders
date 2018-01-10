@@ -21,7 +21,7 @@ class Login extends CI_controller
 		$this->load->model('fragrance');
 		$cat['fragrance_name']=$this->fragrance->fetchfra();
 
-		$this->load->view('user/login');
+		$this->load->view('user/login',$cat);
 	}
 
 	public function userlogin()
@@ -37,7 +37,8 @@ class Login extends CI_controller
 				redirect('home');
 		}
 		else {
-			echo 'Password Invalid';
+			$this->session->set_flashdata('loginerror','error');
+			redirect('login');
 		}
 	}
 	

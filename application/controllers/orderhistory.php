@@ -22,7 +22,7 @@ class Orderhistory extends CI_controller
 
 		$this->load->model('order');
 		$email_id=$this->session->userdata('email_id');
-		$type=2;
+		$type=0;
 
 		if(!$this->session->userdata('email_id'))
 		{

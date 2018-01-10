@@ -33,6 +33,19 @@ else
 {
  echo redirect('login');
 }
+
+if($this->session->flashdata('success'))
+{
+  
+
+echo '<script langauge="javascript">;
+                alert("Something went Wrong ..Please Try Again!!");
+               
+                </script>';
+
+}
+
+
 ?>
 
 

@@ -22,7 +22,7 @@ class Register extends CI_controller
 		$this->load->model('fragrance');
 		$cat['fragrance_name']=$this->fragrance->fetchfra();
 
-		$this->load->view('user/register');
+		$this->load->view('user/register',$cat);
 	}
 
 	public function userregister()
@@ -55,12 +55,14 @@ class Register extends CI_controller
 			}
 			else 
 			{
-				echo 'Invalid';
+				$this->session->set_flashdata('registererror','error');
+				echo redirect('register');
 			}
 		}
 		else
 		{
-			echo 'Password and Confirm Password are not matched.';
+			$this->session->set_flashdata('passworderror','error');
+				echo redirect('register');
 		}
 	}
 
