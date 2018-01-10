@@ -44,4 +44,20 @@ class Singlepage extends CI_controller
 			echo redirect('home');
 		}
 	}
+	public function addtowish($product_id)
+	{
+		//echo $product_id;
+		$this->load->model('order');
+		$email_id=$this->session->userdata('email_id');
+		$d1=date('d-m-Y');
+		
+		if($this->order->insertorderinwish($email_id,$product_id,$d1))
+		{
+			echo redirect('wishlist');
+		}
+		else
+		{
+			echo redirect('home');
+		}
+	}
 }

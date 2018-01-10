@@ -66,6 +66,8 @@ else
                       <div class="clearfix"></div>
                     </div>
                     <div class="add">
+                       <a href="<?php echo site_url('singlepage/addtocart/'.$cat_name->pk_product_id); ?>">
+                     
                        <button class="btn btn-danger my-cart-btn my-cart-b " data-id="1" data-name="Moong" data-summary="summary 1" data-price="1.50" data-quantity="1" data-image="images/of.png">Add to Cart</button>
                     </div>
                     

@@ -62,7 +62,7 @@ else
                 <tr>
                   <th> Image </th>
                   <th> Product Description </th>
-                  <th> Date </th>
+                  <th> Price </th>
                   <th> Delete </th>
                 </tr>
 
@@ -73,9 +73,15 @@ else
                 <tr>
                   <td><img height=70 width=100 src="<?php echo  base_url().'/application/assets/'.$cart_view->product_photo ?>"></td>
                   <td><?php echo $cart_view->product_name ?></td>
-                  <td><?php echo $cart_view->order_date ?></td>
-                  <td><a href="<?php echo site_url() ?>"><button class="btn btn-danger">Delete</button></a>
-                    <a href="<?php echo site_url("wishlist/updatecart/".$cart_view->fk_product_id); ?>"><button class="btn btn-success">Add to cart</button></a></td>
+                  <td><?php echo $cart_view->product_price ?></td>
+                  <td>
+                    <a href="<?php echo site_url("wishlist/updatecart/".$cart_view->fk_product_id); ?>"><button class="btn btn-success">Add to cart</button></a>
+
+
+                    <a href="<?php echo site_url('cartview/deletewishorder/'.$cart_view->pk_product_id); ?>">
+                      <button class="btn btn-danger">Delete</button>
+                    </a>
+                    </td>
                 </tr>
                  <?php endforeach;
                   endif;

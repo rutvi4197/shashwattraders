@@ -102,7 +102,8 @@ else
 											<a href="<?php echo site_url('singlepage/addtocart/'.$id); ?>">
 										   <button class="btn btn-danger my-cart-btn my-cart-b">Add to Cart</button></a>
 
-										   <button class="btn btn-danger my-cart-btn my-cart-b " ><i class="fa fa-heart" aria-hidden="true"></i></button>
+										   <a href="<?php echo site_url('singlepage/addtowish/'.$id); ?>">
+										   <button class="btn btn-danger my-cart-btn my-cart-b " ><i class="fa fa-heart" aria-hidden="true"></i></button></a>
 										
 											<button class="btn btn-danger my-cart-btn my-cart-b">Buy Now</button>
 						 

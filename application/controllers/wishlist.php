@@ -6,7 +6,6 @@ class wishlist extends CI_controller
 	{
 		$this->load->model('brand');
 		$cat['brand_name']=$this->brand->fetchbrand();
-		
 
 		$this->load->model('product');
 		$cat['product_name']=$this->product->fetchproduct();
@@ -33,13 +32,14 @@ class wishlist extends CI_controller
 	{
 		$this->load->model('order');
 		$email_id=$this->session->userdata('email_id');
-		if($this->order->updatecart($product_id,$email_id))
+		$type=1;
+		if($this->order->editcart($email_id,$product_id,$type))
 		{
-
+			echo redirect('cartview');
 		}
 		else
 		{
-			
+			echo redirect('wishlist');
 		}
 	}
 }

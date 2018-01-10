@@ -91,7 +91,10 @@ else
                ?>
                <tr>
                 
-                <td colspan="6" style="text-align: right;" >Total Amount is <b>Rs.<?php echo $tot?></b></td>
+                <td colspan="5" style="text-align: right;" >Total Amount is <b>Rs.<?php echo $tot?></b></td>
+                <td><a href="<?php echo site_url('cartview/buynow') ?>">
+                  <button class="btn btn-success">Buy Now</button></a></td>
+               
                </tr>
               </table>
 
