@@ -35,21 +35,15 @@ class wishlist extends CI_controller
 		$type=1;
 		if($this->order->editcart($email_id,$product_id,$type))
 		{
-<<<<<<< HEAD
+
 			echo redirect('cartview');
 		}
-		else
-		{
-			echo redirect('wishlist');
-=======
-				echo redirect('cartview');
-		}
+		
 		else
 		{
 			 $this->session->set_flashdata('success','Something went Wrong');
 			 echo redirect('wishlist');
                
->>>>>>> 8fe464b9513e3116ab01df51ceafed5f63f5de3d
 		}
 	}
 }
