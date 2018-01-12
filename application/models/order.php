@@ -39,6 +39,24 @@ class Order extends CI_Model
 			echo redirect('wishlist');
 		}
 	}
+	public function place($email_id,$type)
+	{
+		$q=$this->db->query("select * from order_tbl where fk_user_email_id='$email_id' and type =1");
+		if($q->num_rows!=0)
+		{
+			$q=$this->db->query("update order_tbl set type='$type' 
+				where fk_user_email_id='$email_id'");
+
+			if($this->db->affected_rows() >= 0)
+				return true;
+			else
+				return false;
+		}
+		else
+		{
+			echo redirect('cartview');
+		}
+	}
 	public function insertorderinwish($email_id,$product_id,$date)
 	{
 		$q=$this->db->query("select * from order_tbl where fk_product_id='$product_id' and fk_user_email_id='$email_id' ");

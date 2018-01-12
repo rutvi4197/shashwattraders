@@ -60,7 +60,7 @@ class Cartview extends CI_controller
 			echo redirect('login');
 		}
 		else{
-		if($this->order->editbuy($email_id,$type))
+		if($this->order->place($email_id,$type))
 			echo redirect('cartview');
 		else
 			echo "Order Not Placed";
