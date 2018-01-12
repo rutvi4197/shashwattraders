@@ -59,9 +59,7 @@ class Singlepage extends CI_controller
 		
 		else
 		{
-			 $this->session->set_flashdata('success','Something went Wrong');
-			 //echo redirect('wishlist');
-               
+			 echo redirect('home');  
 		}
 	}
 }

@@ -27,7 +27,7 @@ class Order extends CI_Model
 		if($q->num_rows!=0)
 		{
 			$q=$this->db->query("update order_tbl set type='$type' 
-				where fk_user_email_id='$email_id' and fk_product_id='$product_id'");
+				where fk_user_email_id='$email_id' and fk_product_id='$product_id' and type!=0");
 
 			if($this->db->affected_rows() >= 0)
 				return true;
@@ -59,7 +59,7 @@ class Order extends CI_Model
 	}
 	public function insertorderinwish($email_id,$product_id,$date)
 	{
-		$q=$this->db->query("select * from order_tbl where fk_product_id='$product_id' and fk_user_email_id='$email_id' ");
+		$q=$this->db->query("select * from order_tbl where fk_product_id='$product_id' and fk_user_email_id='$email_id' and type=2");
 		if($q->num_rows==0)
 		{
 					$q=$this->db->query("INSERT INTO order_tbl 
