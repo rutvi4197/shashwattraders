@@ -228,7 +228,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                   </div>  
                 </ul>
               </li>
-              <li><a href="contact.php" class="hyper"><span>Contact Us</span></a></li>
+              <li><a href="<?php  echo site_url('contact');?>" class="hyper"><span>Contact Us</span></a></li>
             </ul>
           </div>
           </nav>
