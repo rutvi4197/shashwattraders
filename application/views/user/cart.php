@@ -100,7 +100,6 @@ else
               
                 <tr>
                     <td colspan="6" style="text-align: right;">
-                      <a href="<?php echo site_url(); ?>">
                       <a href="<?php echo site_url('cartview/buynow/'); ?>">
                       
                     <button class="btn btn-primary">Check Out</button></a>

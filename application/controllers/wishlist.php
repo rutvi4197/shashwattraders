@@ -36,7 +36,7 @@ class wishlist extends CI_controller
 		if($this->order->editbuy($email_id,$product_id,$type))
 		{
 
-			echo redirect('wishlist');
+			echo redirect('cartview');
 		}
 		
 		else
