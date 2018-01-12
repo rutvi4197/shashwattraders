@@ -49,4 +49,51 @@ class Cartview extends CI_controller
 		echo redirect('cartview');
 		}
 	}
+	public function placeorder()
+	{
+		$this->load->model('order');
+		$email_id=$this->session->userdata('email_id');
+		$type=0;
+
+		if(!$this->session->userdata('email_id'))
+		{
+			echo redirect('login');
+		}
+		else{
+		if($this->order->place($email_id,$type))
+			echo redirect('cartview');
+		else
+			echo "Order Not Placed";
+		}
+	}
+	public function deletewishorder($product_id)
+	{
+		$this->load->model('order');
+		$email_id=$this->session->userdata('email_id');
+		$type=2;
+
+		if(!$this->session->userdata('email_id'))
+		{
+			echo redirect('login');
+		}
+		else{
+		$this->order->deletewishcart($email_id,$product_id,$type);
+		echo redirect('wishlist');
+		}
+	}
+	public function buynow()
+	{
+		$this->load->model('order');
+		$email_id=$this->session->userdata('email_id');
+		$type=1;
+
+		if(!$this->session->userdata('email_id'))
+		{
+			echo redirect('login');
+		}
+		else{
+		$this->order->checkout($email_id);
+		echo redirect('buynow');
+		}
+	}
 }
