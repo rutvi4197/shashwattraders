@@ -44,7 +44,7 @@ class Singlepage extends CI_controller
 			echo redirect('home');
 		}
 	}
-	public function addtowish($product_id)
+	public function insertwishcart($product_id)
 	{
 		//echo $product_id;
 		$this->load->model('order');
@@ -58,6 +58,26 @@ class Singlepage extends CI_controller
 		else
 		{
 			echo redirect('home');
+		}
+	}
+	public function addtowish($product_id)
+	{
+		$this->load->model('order');
+		$email_id=$this->session->userdata('email_id');
+		$type=2;
+		$d2=date('d-m-Y');
+
+		if($this->order->insertorderinwish($email_id,$product_id,$d2))
+		{
+
+			echo redirect('wishlist');
+		}
+		
+		else
+		{
+			 $this->session->set_flashdata('success','Something went Wrong');
+			 //echo redirect('wishlist');
+               
 		}
 	}
 }

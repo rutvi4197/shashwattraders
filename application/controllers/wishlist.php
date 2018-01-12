@@ -33,17 +33,18 @@ class wishlist extends CI_controller
 		$this->load->model('order');
 		$email_id=$this->session->userdata('email_id');
 		$type=1;
-		if($this->order->editcart($email_id,$product_id,$type))
+		if($this->order->editbuy($email_id,$product_id,$type))
 		{
 
-			echo redirect('cartview');
+			echo redirect('wishlist');
 		}
 		
 		else
 		{
 			 $this->session->set_flashdata('success','Something went Wrong');
-			 echo redirect('wishlist');
+			 //echo redirect('wishlist');
                
 		}
 	}
+	
 }
