@@ -7,6 +7,17 @@
 <meta property="og:title" content="Vide" />
 <meta name="keywords" content="Big store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<style type="text/css">
+
+tr:nth-child(odd){
+  background-color: lightgray;
+}
+
+tbody{
+  font-size: 160% !important;
+}
+
+</style>
 </head>
 <body>
 

@@ -3,7 +3,14 @@
 <html>
 <head>
 <title>Shashwat Traders</title>
+<style type="text/css">
 
+
+tbody{
+  font-size: 160% !important;
+}
+
+</style>
 </head>
 <body>
 <?php 
@@ -105,7 +112,8 @@ else
 										   <a href="<?php echo site_url('singlepage/addtowish/'.$id); ?>">
 										   <button class="btn btn-danger my-cart-btn my-cart-b " ><i class="fa fa-heart" aria-hidden="true"></i></button></a>
 										
-											<button class="btn btn-danger my-cart-btn my-cart-b">Buy Now</button>
+										   <a href="<?php echo site_url('buynow/buyproduct/'.$id); ?>">
+											<button class="btn btn-danger my-cart-btn my-cart-b">Buy Now</button></a>
 						 
 			   </div>
 			<div class="clearfix"> </div>

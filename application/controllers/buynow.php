@@ -35,4 +35,42 @@ class Buynow extends CI_controller
 		$this->load->view('user/buynow',$cat);
 		}
 	}
+
+	public function buyproduct($product_id)
+	{
+		$this->load->model('brand');
+		$cat['brand_name']=$this->brand->fetchbrand();
+		
+
+		$this->load->model('product');
+		$cat['product_name']=$this->product->fetchproduct();
+
+		$this->load->model('category');
+		$cat['category_name']=$this->category->fetchcat();
+
+		$this->load->model('packingtype');
+		$cat['packing_name']=$this->packingtype->fetchpack();
+
+		$this->load->model('fragrance');
+		$cat['fragrance_name']=$this->fragrance->fetchfra();
+
+		$this->load->model('order');
+		$email_id=$this->session->userdata('email_id');
+		$type=1;
+
+		if(!$this->session->userdata('email_id'))
+		{
+			echo redirect('login');
+		}
+		else{
+		$cat['buy_product']=$this->order->fetchproductbyemail($product_id);
+		$this->load->view('user/buyproduct',$cat);
+		}
+		
+	
+
+
+
+
+	}
 }
