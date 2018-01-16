@@ -32,12 +32,13 @@ class Register extends CI_controller
 		$email_id=$this->input->post('Email');
 		$password=$this->input->post('Password');
 		$cpassword=$this->input->post('ConfirmPassword');
+		$user_mobile_no=$this->input->post('Mobile');
 		$user_add1='null';
 		$user_add2='null';
 		$user_city='null';
 		$user_pincode=0;
 		$user_type="user";
-		$user_mobile_no=0;
+		
 
 
 		// echo $email_id.'</br>';

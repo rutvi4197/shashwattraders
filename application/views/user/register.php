@@ -76,6 +76,11 @@ elseif($this->session->flashdata('passworderror'))
               <input  type="password" value="ConfirmPassword" name="ConfirmPassword" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'ConfirmPassword';}" required="">
               <div class="clearfix"></div>
             </div>
+            <div class="key">
+              <i class="fa fa-mobile" aria-hidden="true"></i>
+              <input  type="text" value="Mobile" name="Mobile" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+              <div class="clearfix"></div>
+            </div>
             <input type="submit" value="Submit">
           </form>
         </div>
